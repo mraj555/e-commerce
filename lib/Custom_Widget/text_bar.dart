@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TextBar extends StatelessWidget {
-  final String label;
+class TextBar extends StatefulWidget {
   final FocusNode focusNode;
   final String hintText;
   final IconData prefixIcon;
@@ -10,52 +9,37 @@ class TextBar extends StatelessWidget {
   final TextEditingController controller;
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
+  final String? Function(String?)? validator;
 
-  TextBar({
-    required this.label,
-    required this.focusNode,
-    required this.hintText,
-    required this.prefixIcon,
-    this.obscureText,
-    required this.controller,
-    this.suffixIcon,
-    this.keyboardType
-  });
+  TextBar({required this.focusNode, required this.hintText, required this.prefixIcon, this.obscureText, required this.controller, this.suffixIcon, this.keyboardType, required this.validator});
 
+  @override
+  State<TextBar> createState() => _TextBarState();
+}
+
+class _TextBarState extends State<TextBar> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return TextFormField(
-      validator: (val) {
-        if (val!.isEmpty) {
-          return '$label is required.';
-        }
-        if (label == 'Password') {
-          if (!RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$').hasMatch(val)) {
-            return 'Enter a Valid Password.';
-          }
-        }
-        if (label == 'Email') {
-          if (!RegExp('^[a-zA-Z0-9+_.-]+@[a-zA-Z.-]+.[a-z]').hasMatch(val)) {
-            return 'Enter a Valid Email.';
-          }
-        }
-        if (label == 'Confirm Password') {
-          if (!RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$').hasMatch(val)) {
-            return 'Enter a Valid Password.';
-          }
-        }
+      validator: widget.validator,
+      keyboardType: widget.keyboardType,
+      controller: widget.controller,
+      focusNode: widget.focusNode,
+      onChanged: (val) {
+        setState(
+          () {
+            val = widget.controller.text;
+          },
+        );
       },
-      keyboardType: keyboardType,
-      controller: controller,
-      focusNode: focusNode,
       obscuringCharacter: '*',
-      obscureText: obscureText == null ? false : obscureText!,
+      obscureText: widget.obscureText == null ? false : widget.obscureText!,
       decoration: InputDecoration(
           fillColor: Colors.white,
           filled: true,
           border: InputBorder.none,
-          hintText: hintText,
+          hintText: widget.hintText,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
             borderSide: BorderSide.none,
@@ -73,10 +57,10 @@ class TextBar extends StatelessWidget {
             borderSide: BorderSide.none,
           ),
           prefixIcon: Icon(
-            prefixIcon,
-            color: focusNode.hasFocus ? Colors.green : Colors.grey,
+            widget.prefixIcon,
+            color: widget.focusNode.hasFocus ? Colors.green : Colors.grey,
           ),
-          suffixIcon: suffixIcon,
+          suffixIcon: widget.suffixIcon,
           contentPadding: EdgeInsets.only(top: size.width * 0.055, bottom: size.width * 0.055)),
     );
   }

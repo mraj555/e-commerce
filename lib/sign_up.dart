@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -64,7 +66,11 @@ class _SignUpState extends State<SignUp> {
                       height: size.height * 0.05,
                     ),
                     TextBar(
-                      label: 'Name',
+                      validator: (val) {
+                        if (val!.isEmpty) {
+                          return 'Name is Required.';
+                        }
+                      },
                       focusNode: focusNode,
                       keyboardType: TextInputType.name,
                       hintText: 'Enter Your Name',
@@ -75,7 +81,14 @@ class _SignUpState extends State<SignUp> {
                       height: size.height * 0.02,
                     ),
                     TextBar(
-                      label: 'Email',
+                      validator: (val) {
+                        if (val!.isEmpty) {
+                          return 'Email is Required';
+                        }
+                        if (!RegExp(r"[a-zA-Z0-9+_.-]+@[a-zA-Z.-]+\.[a-z]+").hasMatch(val)) {
+                          return 'Enter a Valid Email.';
+                        }
+                      },
                       focusNode: focusNode2,
                       keyboardType: TextInputType.emailAddress,
                       hintText: 'Enter Email ID',
@@ -86,7 +99,14 @@ class _SignUpState extends State<SignUp> {
                       height: size.height * 0.02,
                     ),
                     TextBar(
-                      label: 'Mobile',
+                      validator: (val) {
+                        if (val!.isEmpty) {
+                          return 'Mobile Number is Required';
+                        }
+                        if (val.length < 10) {
+                          return 'Enter a Valid Mobile Number.';
+                        }
+                      },
                       keyboardType: TextInputType.phone,
                       focusNode: focusNode3,
                       hintText: 'Enter Mobile No.',
@@ -97,7 +117,14 @@ class _SignUpState extends State<SignUp> {
                       height: size.height * 0.02,
                     ),
                     TextBar(
-                      label: 'Password',
+                      validator: (val) {
+                        if (val!.isEmpty) {
+                          return 'Password is Required';
+                        }
+                        if (!RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$').hasMatch(val)) {
+                          return 'Enter a Valid Password.';
+                        }
+                      },
                       focusNode: focusNode4,
                       keyboardType: TextInputType.visiblePassword,
                       hintText: 'Enter Password',
@@ -122,7 +149,17 @@ class _SignUpState extends State<SignUp> {
                       height: size.height * 0.02,
                     ),
                     TextBar(
-                      label: 'Confirm Password',
+                      validator: (val) {
+                        if (val!.isEmpty) {
+                          return 'Confirm Password is Required';
+                        }
+                        if (!RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$').hasMatch(val)) {
+                          return 'Enter a Valid Confirm Password.';
+                        }
+                        if (confirm_password.text != password.text) {
+                          return 'Confirm Password Do not match.';
+                        }
+                      },
                       focusNode: focusNode5,
                       keyboardType: TextInputType.visiblePassword,
                       hintText: 'Enter Confirm Password',
@@ -152,7 +189,7 @@ class _SignUpState extends State<SignUp> {
                     ElevatedButton(
                       onPressed: () {
                         if (key.currentState!.validate()) {
-                          print('Valid');
+                          signupwithemail();
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -267,5 +304,24 @@ class _SignUpState extends State<SignUp> {
         ),
       ),
     );
+  }
+
+  signupwithemail() async {
+    try {
+      UserCredential result = await FirebaseAuth.instance
+          .createUserWithEmailAndPassword(
+        email: email.text,
+        password: password.text,
+      );
+      User? user = result.user;
+      if(user!=null) {
+        await user.updateDisplayName(name.text);
+        await user.reload();
+        user = await FirebaseAuth.instance.currentUser;
+        print('User : - ${user}');
+      }
+    } catch (e) {
+      print(e);
+    }
   }
 }

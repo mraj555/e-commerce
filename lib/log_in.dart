@@ -1,8 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project/Custom_Widget/text_bar.dart';
+import 'package:project/home_page.dart';
 import 'package:project/sign_up.dart';
 
 class LogIn extends StatefulWidget {
@@ -57,7 +59,14 @@ class _LogInState extends State<LogIn> {
                       height: size.height * 0.05,
                     ),
                     TextBar(
-                      label: 'Email',
+                      validator: (val) {
+                        if (val!.isEmpty) {
+                          return 'Email is Required';
+                        }
+                        if (!RegExp(r"[a-zA-Z0-9+_.-]+@[a-zA-Z.-]+\.[a-z]+").hasMatch(val)) {
+                          return 'Enter a Valid Email.';
+                        }
+                      },
                       focusNode: focusNode,
                       hintText: 'Enter Email ID',
                       prefixIcon: Icons.mail_outline,
@@ -67,7 +76,14 @@ class _LogInState extends State<LogIn> {
                       height: size.height * 0.02,
                     ),
                     TextBar(
-                      label: 'Password',
+                      validator: (val) {
+                        if (val!.isEmpty) {
+                          return 'Password is Required';
+                        }
+                        if (!RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$').hasMatch(val)) {
+                          return 'Enter a Valid Password.';
+                        }
+                      },
                       focusNode: focusNode2,
                       hintText: 'Enter Password',
                       prefixIcon: Icons.password,
@@ -111,7 +127,7 @@ class _LogInState extends State<LogIn> {
                     ElevatedButton(
                       onPressed: () {
                         if (key.currentState!.validate()) {
-                          print('Valid');
+                          signinwithemail();
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -129,7 +145,7 @@ class _LogInState extends State<LogIn> {
                       height: size.height * 0.05,
                     ),
                     Row(
-                      children: [
+                      children: const [
                         Expanded(
                           child: Divider(
                             indent: 10,
@@ -164,7 +180,7 @@ class _LogInState extends State<LogIn> {
                               primary: Colors.transparent,
                               shadowColor: Colors.transparent,
                               padding: EdgeInsets.symmetric(vertical: size.width * 0.035, horizontal: size.width * 0.06),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: BorderSide(color: Colors.white, width: 2))),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: const BorderSide(color: Colors.white, width: 2))),
                         ),
                         ElevatedButton(
                           onPressed: () {},
@@ -177,7 +193,7 @@ class _LogInState extends State<LogIn> {
                               primary: Colors.transparent,
                               shadowColor: Colors.transparent,
                               padding: EdgeInsets.symmetric(vertical: size.width * 0.035, horizontal: size.width * 0.06),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: BorderSide(color: Colors.white, width: 2))),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: const BorderSide(color: Colors.white, width: 2))),
                         ),
                         ElevatedButton(
                           onPressed: () {},
@@ -190,7 +206,7 @@ class _LogInState extends State<LogIn> {
                               primary: Colors.transparent,
                               shadowColor: Colors.transparent,
                               padding: EdgeInsets.symmetric(vertical: size.width * 0.035, horizontal: size.width * 0.06),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: BorderSide(color: Colors.white, width: 2))),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: const BorderSide(color: Colors.white, width: 2))),
                         ),
                       ],
                     ),
@@ -207,7 +223,7 @@ class _LogInState extends State<LogIn> {
                             recognizer: TapGestureRecognizer()
                               ..onTap = () => Navigator.of(context).pushReplacement(
                                     MaterialPageRoute(
-                                      builder: (context) => SignUp(),
+                                      builder: (context) => const SignUp(),
                                     ),
                                   ),
                             style: GoogleFonts.lora(
@@ -226,5 +242,19 @@ class _LogInState extends State<LogIn> {
         ),
       ),
     );
+  }
+
+  signinwithemail() async {
+    try {
+      var cred = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email.text, password: password.text);
+      var user = cred.user;
+      Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => HomePage(user: user!),
+        ),
+      );
+    } catch (e) {
+      print(e);
+    }
   }
 }
