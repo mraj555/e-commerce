@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:project/Custom_Widget/text_bar.dart';
 import 'package:project/home_page.dart';
 import 'package:project/sign_up.dart';
@@ -127,7 +128,7 @@ class _LogInState extends State<LogIn> {
                     ElevatedButton(
                       onPressed: () {
                         if (key.currentState!.validate()) {
-                          signinwithemail();
+                          signInWithEmail();
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -170,7 +171,9 @@ class _LogInState extends State<LogIn> {
                       alignment: MainAxisAlignment.spaceAround,
                       children: [
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            signInWithGoogle();
+                          },
                           child: Image.asset(
                             'assets/Icons/google.png',
                             width: size.width / 12,
@@ -244,13 +247,28 @@ class _LogInState extends State<LogIn> {
     );
   }
 
-  signinwithemail() async {
+  signInWithEmail() async {
     try {
-      var cred = await FirebaseAuth.instance.signInWithEmailAndPassword(email: email.text, password: password.text);
-      var user = cred.user;
+      await FirebaseAuth.instance.signInWithEmailAndPassword(email: email.text, password: password.text);
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => HomePage(user: user!),
+          builder: (context) => HomePage(),
+        ),
+      );
+    } catch (e) {
+      print (e);
+    }
+  }
+
+  signInWithGoogle() async {
+    try {
+      var user = await GoogleSignIn().signIn();
+      var auth = await user!.authentication;
+      var cred = GoogleAuthProvider.credential(idToken: auth.idToken, accessToken: auth.accessToken);
+      await FirebaseAuth.instance.signInWithCredential(cred);
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => HomePage(),
         ),
       );
     } catch (e) {

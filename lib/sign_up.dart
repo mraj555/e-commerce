@@ -1,9 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:project/Custom_Widget/text_bar.dart';
 import 'package:project/log_in.dart';
 
@@ -189,7 +188,7 @@ class _SignUpState extends State<SignUp> {
                     ElevatedButton(
                       onPressed: () {
                         if (key.currentState!.validate()) {
-                          signupwithemail();
+                          signUpwithEmail();
                         }
                       },
                       style: ElevatedButton.styleFrom(
@@ -207,7 +206,7 @@ class _SignUpState extends State<SignUp> {
                       height: size.height * 0.05,
                     ),
                     Row(
-                      children: [
+                      children: const [
                         Expanded(
                           child: Divider(
                             indent: 10,
@@ -232,7 +231,9 @@ class _SignUpState extends State<SignUp> {
                       alignment: MainAxisAlignment.spaceAround,
                       children: [
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            signUpWithGoogle();
+                          },
                           child: Image.asset(
                             'assets/Icons/google.png',
                             width: size.width / 12,
@@ -306,20 +307,38 @@ class _SignUpState extends State<SignUp> {
     );
   }
 
-  signupwithemail() async {
+  signUpwithEmail() async {
     try {
-      UserCredential result = await FirebaseAuth.instance
-          .createUserWithEmailAndPassword(
+      UserCredential result = await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email.text,
         password: password.text,
       );
       User? user = result.user;
-      if(user!=null) {
+      if (user != null) {
         await user.updateDisplayName(name.text);
         await user.reload();
-        user = await FirebaseAuth.instance.currentUser;
-        print('User : - ${user}');
       }
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => LogIn(),
+        ),
+      );
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  signUpWithGoogle() async {
+    try {
+      var user = await GoogleSignIn().signIn();
+      var auth = await user!.authentication;
+      var cred = GoogleAuthProvider.credential(idToken: auth.idToken, accessToken: auth.accessToken);
+      await FirebaseAuth.instance.signInWithCredential(cred);
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => LogIn(),
+        ),
+      );
     } catch (e) {
       print(e);
     }

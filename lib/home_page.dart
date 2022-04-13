@@ -3,15 +3,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
-  final User user;
-
-  const HomePage({Key? key, required this.user}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+
+  var user = FirebaseAuth.instance.currentUser;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> {
         body: Container(
           alignment: Alignment.center,
           child: Text(
-            'Name :- ${widget.user.displayName}',
+            'Name :- ${user!.displayName}',
             style: TextStyle(
               color: Colors.black,
               fontSize: 20,
