@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:project/User%20Details/log_in.dart';
 import 'package:project/home_page.dart';
 import 'package:project/User%20Details/verification_page.dart';
 
@@ -72,10 +73,11 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
 
   @override
   Widget build(BuildContext context) {
+    print(ModalRoute.of(context)?.settings.name);
     return SafeArea(
       child: Scaffold(
-        body: isVerified
-            ? const HomePage()
+        body: isVerified && ModalRoute.of(context)?.settings.name == '/signupdecision' ? const LogIn() :
+            isVerified ? const HomePage()
             : const VerificationPage()
       ),
     );

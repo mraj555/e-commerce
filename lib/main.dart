@@ -10,8 +10,11 @@ void main() async {
   await Firebase.initializeApp();
   runApp(
     MaterialApp(
+      routes: {
+        '/signupdecision' : (context) => DecisionTree(),
+      },
       debugShowCheckedModeBanner: false,
-      home: DecisionTree(),
+      home: const DecisionTree(),
     ),
   );
 }
