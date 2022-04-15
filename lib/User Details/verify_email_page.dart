@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:project/home_page.dart';
-import 'package:project/verification_page.dart';
+import 'package:project/User%20Details/verification_page.dart';
 
 class VerifyEmailPage extends StatefulWidget {
   const VerifyEmailPage({Key? key}) : super(key: key);
@@ -72,7 +72,6 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return SafeArea(
       child: Scaffold(
         body: isVerified

@@ -4,8 +4,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:project/Custom_Widget/text_bar.dart';
-import 'package:project/log_in.dart';
-import 'package:project/verification_page.dart';
+import 'package:project/User%20Details/log_in.dart';
+import 'package:project/User%20Details/verification_page.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);

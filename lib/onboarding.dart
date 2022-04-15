@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:project/log_in.dart';
+import 'package:project/User%20Details/log_in.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoarding extends StatefulWidget {

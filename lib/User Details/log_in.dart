@@ -1,15 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:project/Custom_Widget/text_bar.dart';
-import 'package:project/home_page.dart';
-import 'package:project/sign_up.dart';
-import 'package:project/verify_email_page.dart';
+import 'package:project/User%20Details/sign_up.dart';
+import 'package:project/User%20Details/verify_email_page.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({Key? key}) : super(key: key);
@@ -70,6 +69,7 @@ class _LogInState extends State<LogIn> {
                         if (!RegExp(r"[a-zA-Z0-9+_.-]+@[a-zA-Z.-]+\.[a-z]+").hasMatch(val)) {
                           return 'Enter a Valid Email.';
                         }
+                        return null;
                       },
                       focusNode: focusNode,
                       hintText: 'Enter Email ID',
@@ -87,6 +87,7 @@ class _LogInState extends State<LogIn> {
                         if (!RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$').hasMatch(val)) {
                           return 'Enter a Valid Password.';
                         }
+                        return null;
                       },
                       focusNode: focusNode2,
                       hintText: 'Enter Password',
@@ -257,11 +258,13 @@ class _LogInState extends State<LogIn> {
       await FirebaseAuth.instance.signInWithEmailAndPassword(email: email.text, password: password.text);
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => VerifyEmailPage(),
+          builder: (context) => const VerifyEmailPage(),
         ),
       );
     } catch (e) {
-      print (e);
+      if (kDebugMode) {
+        print (e);
+      }
     }
   }
 
@@ -282,11 +285,13 @@ class _LogInState extends State<LogIn> {
       documentReference.set(users);
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => VerifyEmailPage(),
+          builder: (context) => const VerifyEmailPage(),
         ),
       );
     } catch (e) {
-      print(e);
+      if (kDebugMode) {
+        print(e);
+      }
     }
   }
 
@@ -297,7 +302,7 @@ class _LogInState extends State<LogIn> {
     await FirebaseAuth.instance.signInWithCredential(cred);
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => VerifyEmailPage(),
+        builder: (context) => const VerifyEmailPage(),
       ),
     );
   }
