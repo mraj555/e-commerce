@@ -1,12 +1,15 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:project/Custom_Widget/text_bar.dart';
 import 'package:project/home_page.dart';
 import 'package:project/sign_up.dart';
+import 'package:project/verify_email_page.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({Key? key}) : super(key: key);
@@ -93,7 +96,7 @@ class _LogInState extends State<LogIn> {
                       suffixIcon: GestureDetector(
                         onTap: () {
                           setState(
-                            () {
+                                () {
                               show = !show;
                             },
                           );
@@ -199,7 +202,9 @@ class _LogInState extends State<LogIn> {
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: const BorderSide(color: Colors.white, width: 2))),
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            signInWithFacebook();
+                          },
                           child: Image.asset(
                             'assets/Icons/facebook.png',
                             width: size.width / 12,
@@ -219,7 +224,7 @@ class _LogInState extends State<LogIn> {
                     RichText(
                       text: TextSpan(
                         text: 'Not a member? ',
-                        style: GoogleFonts.notoSerif(color: Colors.black),
+                        style: GoogleFonts.notoSerif(color: Colors.black, fontSize: size.width * 0.035),
                         children: [
                           TextSpan(
                             text: 'Register now',
@@ -252,7 +257,7 @@ class _LogInState extends State<LogIn> {
       await FirebaseAuth.instance.signInWithEmailAndPassword(email: email.text, password: password.text);
       Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (context) => HomePage(),
+          builder: (context) => VerifyEmailPage(),
         ),
       );
     } catch (e) {
@@ -266,13 +271,34 @@ class _LogInState extends State<LogIn> {
       var auth = await user!.authentication;
       var cred = GoogleAuthProvider.credential(idToken: auth.idToken, accessToken: auth.accessToken);
       await FirebaseAuth.instance.signInWithCredential(cred);
+      DocumentReference documentReference = FirebaseFirestore.instance.collection('Users').doc(user.email);
+      Map<String, dynamic> users = {
+        'Name': user.displayName,
+        'Email': user.email,
+        'UID': FirebaseAuth.instance.currentUser!.uid,
+        'Mobile': FirebaseAuth.instance.currentUser!.phoneNumber,
+        'Provider': 'Google'
+      };
+      documentReference.set(users);
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => HomePage(),
+          builder: (context) => VerifyEmailPage(),
         ),
       );
     } catch (e) {
       print(e);
     }
+  }
+
+  signInWithFacebook() async {
+    var user = await FacebookAuth.instance.login();
+    var token = user.accessToken!.token;
+    var cred = FacebookAuthProvider.credential(token);
+    await FirebaseAuth.instance.signInWithCredential(cred);
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => VerifyEmailPage(),
+      ),
+    );
   }
 }

@@ -1,8 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:project/Custom_Widget/text_bar.dart';
 import 'package:project/log_in.dart';
 
@@ -133,7 +133,7 @@ class _SignUpState extends State<SignUp> {
                       suffixIcon: GestureDetector(
                         onTap: () {
                           setState(
-                            () {
+                                () {
                               show = !show;
                             },
                           );
@@ -168,7 +168,7 @@ class _SignUpState extends State<SignUp> {
                       suffixIcon: GestureDetector(
                         onTap: () {
                           setState(
-                            () {
+                                () {
                               c_show = !c_show;
                             },
                           );
@@ -203,83 +203,12 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     SizedBox(
-                      height: size.height * 0.05,
-                    ),
-                    Row(
-                      children: const [
-                        Expanded(
-                          child: Divider(
-                            indent: 10,
-                            endIndent: 10,
-                            color: Colors.black,
-                          ),
-                        ),
-                        Text('Or Continue With'),
-                        Expanded(
-                          child: Divider(
-                            indent: 10,
-                            endIndent: 10,
-                            color: Colors.black,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: size.height * 0.05,
-                    ),
-                    ButtonBar(
-                      alignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            signUpWithGoogle();
-                          },
-                          child: Image.asset(
-                            'assets/Icons/google.png',
-                            width: size.width / 12,
-                            height: size.width / 12,
-                          ),
-                          style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent,
-                              shadowColor: Colors.transparent,
-                              padding: EdgeInsets.symmetric(vertical: size.width * 0.035, horizontal: size.width * 0.06),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: BorderSide(color: Colors.white, width: 2))),
-                        ),
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Image.asset(
-                            'assets/Icons/apple.png',
-                            width: size.width / 12,
-                            height: size.width / 12,
-                          ),
-                          style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent,
-                              shadowColor: Colors.transparent,
-                              padding: EdgeInsets.symmetric(vertical: size.width * 0.035, horizontal: size.width * 0.06),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: BorderSide(color: Colors.white, width: 2))),
-                        ),
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Image.asset(
-                            'assets/Icons/facebook.png',
-                            width: size.width / 12,
-                            height: size.width / 12,
-                          ),
-                          style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent,
-                              shadowColor: Colors.transparent,
-                              padding: EdgeInsets.symmetric(vertical: size.width * 0.035, horizontal: size.width * 0.06),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: BorderSide(color: Colors.white, width: 2))),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
                       height: size.height * 0.08,
                     ),
                     RichText(
                       text: TextSpan(
                         text: 'Already a Member? ',
-                        style: GoogleFonts.notoSerif(color: Colors.black),
+                        style: GoogleFonts.notoSerif(color: Colors.black, fontSize: size.width * 0.035),
                         children: [
                           TextSpan(
                             text: 'Sign In',
@@ -309,7 +238,7 @@ class _SignUpState extends State<SignUp> {
 
   signUpwithEmail() async {
     try {
-      UserCredential result = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      var result = await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: email.text,
         password: password.text,
       );
@@ -318,22 +247,13 @@ class _SignUpState extends State<SignUp> {
         await user.updateDisplayName(name.text);
         await user.reload();
       }
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) => LogIn(),
-        ),
-      );
-    } catch (e) {
-      print(e);
-    }
-  }
+      await user!.sendEmailVerification().whenComplete(
+            () => print('Email Send'),
+          );
+      DocumentReference documentReference = FirebaseFirestore.instance.collection('Users').doc(email.text);
+      Map<String, dynamic> users = {'Name': name.text, 'Email': email.text, 'Mobile': mobile.text, 'Password': password.text, 'UID': user.uid, 'Provider': 'Email'};
+      documentReference.set(users);
 
-  signUpWithGoogle() async {
-    try {
-      var user = await GoogleSignIn().signIn();
-      var auth = await user!.authentication;
-      var cred = GoogleAuthProvider.credential(idToken: auth.idToken, accessToken: auth.accessToken);
-      await FirebaseAuth.instance.signInWithCredential(cred);
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
           builder: (context) => LogIn(),
