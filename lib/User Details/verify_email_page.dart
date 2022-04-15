@@ -14,7 +14,7 @@ class VerifyEmailPage extends StatefulWidget {
 
 class _VerifyEmailPageState extends State<VerifyEmailPage> {
   bool isVerified = false;
-  late Timer timer;
+  Timer? timer;
 
   @override
   void initState() {
@@ -35,7 +35,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
 
   @override
   void dispose() {
-    timer.cancel();
+    timer?.cancel();
     super.dispose();
   }
 
@@ -47,7 +47,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
           isVerified = FirebaseAuth.instance.currentUser!.emailVerified;
         },
       );
-      if (isVerified) timer.cancel();
+      if (isVerified) timer?.cancel();
     }
   }
 

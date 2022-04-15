@@ -172,7 +172,7 @@ class _LogInState extends State<LogIn> {
                       height: size.height * 0.05,
                     ),
                     ButtonBar(
-                      alignment: MainAxisAlignment.spaceAround,
+                      alignment: MainAxisAlignment.center,
                       children: [
                         ElevatedButton(
                           onPressed: () {
@@ -189,18 +189,8 @@ class _LogInState extends State<LogIn> {
                               padding: EdgeInsets.symmetric(vertical: size.width * 0.035, horizontal: size.width * 0.06),
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: const BorderSide(color: Colors.white, width: 2))),
                         ),
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Image.asset(
-                            'assets/Icons/apple.png',
-                            width: size.width / 12,
-                            height: size.width / 12,
-                          ),
-                          style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent,
-                              shadowColor: Colors.transparent,
-                              padding: EdgeInsets.symmetric(vertical: size.width * 0.035, horizontal: size.width * 0.06),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5), side: const BorderSide(color: Colors.white, width: 2))),
+                        SizedBox(
+                          width: size.width * 0.1,
                         ),
                         ElevatedButton(
                           onPressed: () {
@@ -263,7 +253,7 @@ class _LogInState extends State<LogIn> {
       );
     } catch (e) {
       if (kDebugMode) {
-        print (e);
+        print(e);
       }
     }
   }
