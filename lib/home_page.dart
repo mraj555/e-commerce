@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:project/User%20Details/log_in.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:project/main_screen.dart';
+
+import 'drawer_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,36 +20,15 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
-          alignment: Alignment.center,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(
-                'Name :- ${user?.displayName}',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              ElevatedButton(
-                onPressed: () async {
-                  await GoogleSignIn().signOut();
-                  await FacebookAuth.instance.logOut();
-                  await FirebaseAuth.instance.signOut();
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (context) => LogIn(),
-                    ),
-                  );
-                },
-                child: Text('Sign Out'),
-              ),
-            ],
-          ),
-        ),
+      body: ZoomDrawer(
+        mainScreen: MainScreen(),
+        menuScreen: DrawerScreen(),
+        menuBackgroundColor: Colors.black,
+        showShadow: true,
+        borderRadius: 20,
+        angle: 0.0,
+        shadowLayer1Color: Colors.transparent,
       ),
-    );
+    ),);
   }
 }
