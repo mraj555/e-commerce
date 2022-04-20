@@ -8,7 +8,7 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey[300],
+        backgroundColor: Color(0xfff7f6f6),
       ),
     );
   }
