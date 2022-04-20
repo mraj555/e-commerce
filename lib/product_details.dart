@@ -36,7 +36,7 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 5.0,
     'BackgroundColor': Colors.orange,
     'Colors': [
-      [Color(0XFFB78727), Color(0XFF353C40)]
+      [const Color(0XFFB78727), const Color(0XFF353C40)]
     ],
     'Description':
         'Making iconic style even more comfortable. The Air Jordan 1 Zoom Cmft remakes the 1st Air Jordan with lightweight, low-profile cushioning and elements that improve wearability. Leathers and textiles in the upper have a broken-in feel. A lined, padded collar cups the heel for a secure fit.',
@@ -64,7 +64,7 @@ List<Map<String, dynamic>> shoes = [
     'Title': 'Nike LeBron 8',
     'Ratings': 4.2,
     'BackgroundColor': Colors.lightGreenAccent,
-    'Colors': [Color(0XFF353E5D)],
+    'Colors': [const Color(0XFF353E5D)],
     'Description':
         'The LeBron 8 has always been a statement shoe, while today the shoe is mostly meant to make a statement off the court, let’s not forget that the full-length Max Air bag and full length phylon midsole gave the King a brand-new ride in 2011. The LeBron 8 V/2 Low brings back everything you loved about original LeBron 8 and this time comes in a treasure blue and vibrant volt green that reminds us the King has brought it on both coasts.',
     'ThumbnailURL':
@@ -95,15 +95,15 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 4.8,
     'BackgroundColor': Colors.amber,
     'Colors': [
-      [Color(0XFFF1DD38), Colors.redAccent],
+      [const Color(0XFFF1DD38), Colors.redAccent],
       [Colors.white, Colors.red],
-      [Colors.white, Color(0XFF4169E1)],
-      [Color(0XFF808080), Color(0XFFD0AD2B)],
-      [Colors.black, Color(0XFFAAA9AD)],
-      [Color(0XFFC2452D), Color(0XFFF3F8EF)],
-      [Color(0XFF7E7F7C), Color(0XFFCECFCE)],
-      [Colors.black, Color(0XFFF3CA5E)],
-      [Color(0XFFD4CDC8), Color(0XFF0E7866)],
+      [Colors.white, const Color(0XFF4169E1)],
+      [const Color(0XFF808080), const Color(0XFFD0AD2B)],
+      [Colors.black, const Color(0XFFAAA9AD)],
+      [const Color(0XFFC2452D), const Color(0XFFF3F8EF)],
+      [const Color(0XFF7E7F7C), const Color(0XFFCECFCE)],
+      [Colors.black, const Color(0XFFF3CA5E)],
+      [const Color(0XFFD4CDC8), const Color(0XFF0E7866)],
       [Colors.white, Colors.black],
     ],
     'Description':
@@ -259,7 +259,7 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 3.5,
     'BackgroundColor': Colors.grey,
     'Colors': [
-      [Color(0XFF939F9E), Color(0XFFADB9B4)]
+      [const Color(0XFF939F9E), const Color(0XFFADB9B4)]
     ],
     'Description':
         'The Jordan Delta 2 SE offers a fresh, fearless take on the features you want: durability, comfort and an attitude that\'s Jordan to the core. We updated design lines and swapped out some components, but the idea is the same as the first Delta. The 2 still has that clashing combination of supportive and space age-like materials, with lots of different textures and heavy stitching to create a look that\'s both adventurous and iconic.',
@@ -288,7 +288,7 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 3.7,
     'BackgroundColor': Colors.pinkAccent,
     'Colors': [
-      [Colors.black, Color(0XFFB92B6D)]
+      [Colors.black, const Color(0XFFB92B6D)]
     ],
     'Description':
         'Russell Westbrook is fast. The Jordan Why Not .5 helps keep him contained with updated cushioning, traction and a full-foot fit system that helps keep him in control. It has the rugged utility look of a trail running shoe combined with the on-purpose clash of colors and materials at the core of Why Not?',
@@ -317,8 +317,8 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 4.4,
     'BackgroundColor': Colors.blueGrey,
     'Colors': [
-      [Color(0XFF737D84), Color(0XFF8C92AC)],
-      [Colors.black, Color(0XFF737D84)],
+      [const Color(0XFF737D84), const Color(0XFF8C92AC)],
+      [Colors.black, const Color(0XFF737D84)],
     ],
     'Description':
         'The Jordan Point Lane mixes elements from game shoes MJ wore during 3 of his most memorable seasons. Named for his Chicago address, this mash-up pulls in bits and pieces from the AJ3, AJ6 and AJ11 to create a shoe that\'s inspired by greatness and uncompromising in its comfort.',
@@ -361,9 +361,9 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 4.7,
     'BackgroundColor': Colors.tealAccent,
     'Colors': [
-      [Color(0XFF40E0D0), Color(0XFFCEA675)],
-      [Color(0XFF87A96B), Colors.black],
-      [Color(0XFF36E5D0), Color(0XFFF96A42)]
+      [const Color(0XFF40E0D0), const Color(0XFFCEA675)],
+      [const Color(0XFF87A96B), Colors.black],
+      [const Color(0XFF36E5D0), const Color(0XFFF96A42)]
     ],
     'Description':
         'With a down-to-earth persona and abilities that are out of this world, Zion is unlike anybody else. On court, the gentle spirit who\'s all about family transforms into an unmatched force of unstoppable athleticism and speed. The Zion 1 kicks off his signature line with a design inspired by his duality of humility meets superhuman ability. Full-length Air Strobel cushioning is stacked with a Zoom Air unit in the forefoot—a sensational mix of plush underfoot comfort and rapid responsiveness. It\'s light, stable and strong, with aggressive traction to help Zion grip the court and control his power.',
@@ -422,9 +422,9 @@ List<Map<String, dynamic>> shoes = [
     'ThumbnailURL':
         'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fair-zoom-alphafly-next-flyknit-ekiden-road-racing-shoes-fNntgL-removebg-preview.png?alt=media&token=4929c1dd-c054-4d4b-ae19-c8a23f344155',
     'Colors': [
-      [Color(0XFFE04B32), Colors.black],
-      [Color(0XFFDEEBB3), Color(0XFFFB6E57)],
-      [Color(0XFFFE8659), Color(0XFF75090B)],
+      [const Color(0XFFE04B32), Colors.black],
+      [const Color(0XFFDEEBB3), const Color(0XFFFB6E57)],
+      [const Color(0XFFFE8659), const Color(0XFF75090B)],
     ],
     'Description':
         'Gear up for your next personal best with the Nike Air Zoom Alphafly NEXT% Flyknit Ekiden. It gives you the greatest energy return of all our racing shoes with a propulsive feel through the finish line. The design is light, breathable and backed by data to help keep you comfortable.',
@@ -482,7 +482,7 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 4.1,
     'BackgroundColor': Colors.black12,
     'Colors': [
-      [Colors.black, Color(0XFFFF1A1A)]
+      [Colors.black, const Color(0XFFFF1A1A)]
     ],
     'Description':
         'Take your favorite vintage court shoes and turn up the heat. Classic design elements like the foam-exposed tongue and \'70s branding are set ablaze with a flaming Swoosh patch and distressed black denim.',
@@ -511,12 +511,12 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 3.9,
     'BackgroundColor': Colors.orangeAccent,
     'Colors': [
-      [Colors.white, Color(0XFFFB9912)],
+      [Colors.white, const Color(0XFFFB9912)],
       [Colors.white, Colors.black],
-      [Colors.black, Color(0XFFAAA9AD)],
+      [Colors.black, const Color(0XFFAAA9AD)],
       [Colors.black, Colors.amber],
-      Color(0XFF737D84),
-      [Colors.white, Color(0XFF8C92AC)],
+      const Color(0XFF737D84),
+      [Colors.white, const Color(0XFF8C92AC)],
       Colors.black,
     ],
     'Description':
@@ -634,10 +634,10 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 4.3,
     'BackgroundColor': Colors.red,
     'Colors': [
-      [Color(0XFFA7977B), Colors.black],
+      [const Color(0XFFA7977B), Colors.black],
       [Colors.black, Colors.grey],
-      [Colors.black, Color(0XFFFE2E4B)],
-      [Color(0XFF6C7466), Colors.black],
+      [Colors.black, const Color(0XFFFE2E4B)],
+      [const Color(0XFF6C7466), Colors.black],
       Colors.black,
     ],
     'Description':
@@ -734,14 +734,14 @@ List<Map<String, dynamic>> shoes = [
     'BackgroundColor': Colors.black38,
     'Colors': [
       [Colors.black, Colors.white],
-      [Colors.white, Color(0XFFC5B9A4)],
-      [Color(0XFFB78727), Color(0XFFC13D36)],
-      [Colors.black, Color(0XFFC3994D)],
-      [Color(0XFF8D8363), Color(0XFF9C4F40)],
-      [Color(0XFF1D4A8E), Color(0XFFE23039)],
+      [Colors.white, const Color(0XFFC5B9A4)],
+      [const Color(0XFFB78727), const Color(0XFFC13D36)],
+      [Colors.black, const Color(0XFFC3994D)],
+      [const Color(0XFF8D8363), const Color(0XFF9C4F40)],
+      [const Color(0XFF1D4A8E), const Color(0XFFE23039)],
       Colors.white,
       Colors.black,
-      Color(0XFFE23039),
+      const Color(0XFFE23039),
     ],
     'Description':
         'Nike\'s first lifestyle Air Max brings you style, comfort and big attitude in the Nike Air Max 270. The design draws inspiration from Air Max icons, showcasing Nike\'s greatest innovation with its large window and fresh array of colors.',
@@ -877,12 +877,12 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 4.8,
     'BackgroundColor': Colors.amber,
     'Colors': [
-      [Color(0XFFEAEAF1), Color(0XFFDDC48C)],
-      [Color(0XFF8D938D), Color(0XFF16E06B)],
-      [Color(0XFF9D978C), Color(0XFFB6B1A5)],
-      [Color(0XFFEAEAF1), Color(0XFFF3C351)],
-      [Color(0XFF209865), Colors.black],
-      [Color(0XFF394153), Colors.black],
+      [const Color(0XFFEAEAF1), const Color(0XFFDDC48C)],
+      [const Color(0XFF8D938D), const Color(0XFF16E06B)],
+      [const Color(0XFF9D978C), const Color(0XFFB6B1A5)],
+      [const Color(0XFFEAEAF1), const Color(0XFFF3C351)],
+      [const Color(0XFF209865), Colors.black],
+      [const Color(0XFF394153), Colors.black],
     ],
     'Description':
         'If you had to decide between style and innovation, which would you choose? Silly question. You shouldn\'t have to make a decision like that. Just lace up in these adidas ZX 5K Boost Shoes and be done with it. Built on the innovative spirit of the ZX design code, they have a full-length Boost midsole wrapped in translucent tooling. Suede overlays and reflective details accent the mesh upper for style that shines.',
@@ -989,10 +989,10 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'ULTRABOOST CLIMACOOL 2',
     'Ratings': 4.8,
-    'BackgroundColor': Color(0XFFF99001),
+    'BackgroundColor': const Color(0XFFF99001),
     'Colors': [
-      [Colors.orange, Color(0XFFD2590C)],
-      [Color(0XFF345166), Color(0XFF45B6D5)],
+      [Colors.orange, const Color(0XFFD2590C)],
+      [const Color(0XFF345166), const Color(0XFF45B6D5)],
       [Colors.white, Colors.black],
       [Colors.grey, Colors.white],
       Colors.black,
@@ -1087,17 +1087,17 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 4.2,
     'BackgroundColor': Colors.grey,
     'Colors': [
-      [Color(0XFFB5B7BF), Color(0XFF95989F)],
+      [const Color(0XFFB5B7BF), const Color(0XFF95989F)],
       Colors.black,
       Colors.white,
-      [Colors.black, Color(0XFF8A8B8E)],
+      [Colors.black, const Color(0XFF8A8B8E)],
       [Colors.white, Colors.black],
-      [Color(0XFFEAEAF2), Color(0XFFBABCC5)],
-      [Colors.black, Color(0XFFB8BBBD)],
-      [Colors.black, Color(0XFF6C7474)],
-      [Color(0XFF42282F), Colors.white],
+      [const Color(0XFFEAEAF2), const Color(0XFFBABCC5)],
+      [Colors.black, const Color(0XFFB8BBBD)],
+      [Colors.black, const Color(0XFF6C7474)],
+      [const Color(0XFF42282F), Colors.white],
       [Colors.white, Colors.grey],
-      [Color(0XFF847D6A), Color(0XFFACA28F)],
+      [const Color(0XFF847D6A), const Color(0XFFACA28F)],
       Colors.grey,
     ],
     'Description':
@@ -1318,13 +1318,13 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'TERREX AX4 PRIMEGREEN',
     'Ratings': 4.3,
-    'BackgroundColor': Color(0XFF339FC9),
+    'BackgroundColor': const Color(0XFF339FC9),
     'Colors': [
-      [Color(0XFF274456), Color(0XFF35A7CD)],
+      [const Color(0XFF274456), const Color(0XFF35A7CD)],
       Colors.black,
-      [Color(0XFF746B5C),Color(0XFF42403B)],
-      [Color(0XFFC4B293), Color(0XFFB49D81)],
-      [Colors.black, Color(0XFF1F4188)],
+      [const Color(0XFF746B5C),const Color(0XFF42403B)],
+      [const Color(0XFFC4B293), const Color(0XFFB49D81)],
+      [Colors.black, const Color(0XFF1F4188)],
     ],
     'Description':
         'Quiver-of-one trail shoes. From forest hikes to alpine adventures, these adidas Terrex hiking shoes let you explore high and low, near or far. Their dual-density design merges the comfort of a cushioned trail runner with the stability of a hiking shoe to take on hikes, scrambles and via ferratas. The all-conditions grip of Continental™ Rubber means you can trust the AX4 to get you anywhere you want to go without worrying about your feet.',
@@ -1421,9 +1421,9 @@ List<Map<String, dynamic>> shoes = [
     'Ratings': 4.7,
     'BackgroundColor': Colors.black,
     'Colors' : [
-      [Colors.black, Color(0XFF7D4757)],
+      [Colors.black, const Color(0XFF7D4757)],
       [Colors.white, Colors.red],
-      [Colors.white, Color(0XFFDCB396)],
+      [Colors.white, const Color(0XFFDCB396)],
       [Colors.white, Colors.black],
     ],
     'Description':
@@ -1507,11 +1507,11 @@ List<Map<String, dynamic>> shoes = [
     'BackgroundColor': Colors.red,
     'Colors' : [
       [Colors.white, Colors.red],
-      [Colors.white, Color(0XFFBEB4B3)],
+      [Colors.white, const Color(0XFFBEB4B3)],
       [Colors.white, Colors.blueAccent],
       Colors.white,
       [Colors.white, Colors.black],
-      [Colors.white, Color(0XFFEECB9B)],
+      [Colors.white, const Color(0XFFEECB9B)],
       [Colors.black, Colors.red],
       [Colors.black, Colors.grey],
       [Colors.white, Colors.grey],
@@ -1696,14 +1696,14 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'FORUM MID SHOES',
     'Ratings': 4.7,
-    'BackgroundColor': Color(0XFFEC7768),
+    'BackgroundColor': const Color(0XFFEC7768),
     'Colors' : [
-      [Colors.black, Color(0XFFF49581)],
-      [Colors.white, Color(0XFF2D5DA8)],
+      [Colors.black, const Color(0XFFF49581)],
+      [Colors.white, const Color(0XFF2D5DA8)],
       [Colors.white, Colors.black],
       [Colors.white, Colors.red],
       Colors.white,
-      [Colors.white, Color(0XFFDFE0DB)],
+      [Colors.white, const Color(0XFFDFE0DB)],
     ],
     'Description':
     'Let\'s take a moment to honor an icon. Hitting the hardwood in \'84, the adidas Forum quickly became a legend among basketball players and culture makers. These shoes pay homage to that original design while updating them for everyday wear. Seamlessly tie together your look with modern colorways that are as fresh as ever.Made with a series of recycled materials, this upper features at least 50% recycled content. This product represents just one of our solutions to help end plastic waste.',
