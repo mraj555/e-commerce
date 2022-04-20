@@ -1804,6 +1804,425 @@ List<Map<String, dynamic>> shoes = [
       },
     },
   },
-
+  //Scuderia Ferrari Speedcat Driving Shoes
+  {
+    'Title': 'Scuderia Ferrari Speedcat',
+    'Ratings': 4.0,
+    'BackgroundColor': Colors.amber,
+    'Colors' : [Colors.amber, Colors.red],
+    'Description':
+    'Born for speed. Raised in style. The Speedcat returns over 20 years later, this time with sleek Scuderia Ferrari engineering. The signature low profile silhouette features a premium suede upper, plus an authentic rounded driver\'s heel and Scuderia Ferrari racing shield at the heel. Taking iconic track style to the streets.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fpng-removebg-preview%20(2).png?alt=media&token=5c1fc41f-0227-48d9-9bae-6d1b2b2b0d53',
+    'Products' : {
+      '0' : {
+        'Price' : '64.99',
+        'Size' : [4, 4.5, 10, 10.5, 11, 11.5, 12, 13],
+        'Images': [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/306796/04/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/306796/04/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/306796/04/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/306796/04/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/306796/04/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/306796/04/sv04/fnd/PNA/fmt/png',
+        ],
+      },
+      '1' : {
+        'Price' : '100.00',
+        'Size' : [4, 4.5, 5, 5.5, 6, 7, 7.5, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+        'Images' : [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/306796/03/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/306796/03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/306796/03/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/306796/03/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/306796/03/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/306796/03/sv04/fnd/PNA/fmt/png',
+        ],
+      },
+    },
+  },
+  //Court Rider Pop Basketball Shoes
+  {
+    'Title': 'Court Rider Pop',
+    'Ratings': 5.0,
+    'BackgroundColor': const Color(0XFF556362),
+    'Colors' : [
+      [Colors.white, const Color(0XFF748C7C)]
+    ],
+    'Description':
+    'Drawing inspiration from the Future Rider, Style Rider and Street Rider, the Court Rider Pop Basketball Shoes perfectly combine form and function. The distinctive materials, shape and colourways are a nod to the Sportstyle Rider, but with its own unique PUMA Hoops flare.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fpng-removebg-preview%20(1).png?alt=media&token=9405130b-401b-43cc-a1be-c6781bbbe8a5',
+    'Products' : {
+      '0' : {
+        'Price' : '100.00',
+        'SIze' : [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14, 16],
+        'Images': [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/376107/02/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/376107/02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/376107/02/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/376107/02/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/376107/02/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/376107/02/sv04/fnd/PNA/fmt/png',
+        ],
+      },
+    },
+  },
+  //Voyage Nitro Gore-Tex Men's Running Shoes
+  {
+    'Title': 'Voyage Nitro Gore-Tex',
+    'Ratings': 3.6,
+    'BackgroundColor': const Color(0XFF1A7C76),
+    'Colors' : [[const Color(0XFF29B7A6), Colors.black]],
+    'Description':
+    'Be prepared to take on even the wildest terrain in this edition of the Voyage. From the silhouette designed to keep dirt and debris out, to the hardy PUMAGRIP rubber outsole for traction in all conditions, and the OPTIFIT construction that keeps your midfoot locked down, every detail has been considered. The highlight is the two-part midsole, with cleverly integrated NITRO FOAM for supremely comfortable, responsive underfoot cushioning. Finished off with a waterproof Gore-Tex upper to protect you from the elements, these durable running trail shoes are ready to tackle any terrain in style.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fpng-removebg-preview.png?alt=media&token=14cce404-1e05-4d35-905b-e1cd3550ddf4',
+    'Products' : {
+      '0' : {
+        'Price' : '150.00',
+        'Size' : [9, 9.5, 10, 10.5, 11, 11.5, 12, 13],
+        'Images': [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/195167/01/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/195167/01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/195167/01/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/195167/01/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/195167/01/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/195167/01/sv04/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/195167/01/dt01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/195167/01/dt02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/195167/01/dt03/fnd/PNA/fmt/png',
+        ],
+      },
+    },
+  },
+  //BMW MMS RS-Z Men's Sneakers
+  {
+    'Title': 'BMW MMS RS-Z',
+    'Ratings': 4.5,
+    'BackgroundColor': Colors.orange,
+    'Colors' : [
+      [Colors.orange, Colors.black],
+      [Colors.black, Colors.blueAccent],
+    ],
+    'Description':
+    'We’re reinventing streetwear from A to Z. Introducing the BMW MMS RS-Z, the latest and greatest addition to the RS family. Its silhouette is sharp and streetwise, with an extreme motorsport design language and extra-bold BMW MMS colors for today’s motorsports fans. This pack features a mesh and textile upper with leather and suede overlays.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fpng-removebg-preview(3).png?alt=media&token=a8c335bd-d645-4770-a6a9-d834b7782e13',
+    'Products' : {
+      '0' : {
+        'Price' : '110.00',
+        'Size' : [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14],
+        'Images': [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/307059/02/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/02/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/02/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/02/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/02/sv04/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/02/dt01/fnd/PNA/fmt/png',
+        ],
+      },
+      '1' : {
+        'Price' : '110.00',
+        'Size' : [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14],
+        'Images' : [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/307059/01/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/01/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/01/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/01/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/01/sv04/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/307059/01/dt01/fnd/PNA/fmt/png',
+        ],
+      },
+    },
+  },
+  //Slipstream Lo Reprise Sneakers
+  {
+    'Title': 'Slipstream Lo Reprise',
+    'Ratings': 3.7,
+    'BackgroundColor': Colors.blueGrey,
+    'Colors' : [
+      [Colors.grey, Colors.white],
+      Colors.white,
+    ],
+    'Description':
+    'Step ahead in the Slipstream Lo Reprise Sneakers from PUMA. Featuring progressive details such as a translucent outsole and moulded PUMA Formstrip and eyestay, these fresh sneakers are a modern update on a beloved heritage classic. The Slipstream Lo was released as a serious basketball shoe in 1987 and was reissued in the 2000s with crazy colorways. Today, these shoes are being reimagined for sneaker lovers like you. Rejuvenate your collection with the Slipstream Lo Reprise.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fpng-removebg-preview(4).png?alt=media&token=1c2829de-b144-4a9e-90e0-2d853bc6c3a5',
+    'Products' : {
+      '0' : {
+        'Price' : '90.00',
+        'Size' : [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14],
+        'Images': [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/384233/02/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/384233/02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/384233/02/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/384233/02/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/384233/02/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/384233/02/sv04/fnd/PNA/fmt/png',
+        ],
+      },
+      '1' : {
+        'Price' : '90.00',
+        'Size' : [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14],
+        'Images' : [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/384233/01/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/384233/01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/384233/01/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/384233/01/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/384233/01/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/384233/01/sv04/fnd/PNA/fmt/png',
+        ],
+      },
+    },
+  },
+  //Suede Mid XXI Sneakers
+  {
+    'Title': 'Suede Mid XXI',
+    'Ratings': 3.7,
+    'BackgroundColor': Colors.redAccent,
+    'Colors' : [
+      [Colors.red, Colors.white],
+      [Colors.black, Colors.white],
+      [const Color(0XFFC8CDCF), Colors.white],
+    ],
+    'Description':
+    'This season, we launch the iconic PUMA Suede into the 21st century in this new mid-top silhouette. The classic style from the \'60s hits new heights with a mid-top padded collar and signature suede upper.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fpng-removebg-preview(5).png?alt=media&token=d1ca20bc-cb43-452d-8357-0b4af644d04e',
+    'Products' : {
+      '0' : {
+        'Price' : '80.00',
+        'Size' : [4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14],
+        'Images': [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/380205/03/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/03/mod03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/03/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/03/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/03/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/03/sv04/fnd/PNA/fmt/png',
+        ],
+      },
+      '1' : {
+        'Price' : '80.00',
+        'Size' : [4, 4.5, 5, 5.5, 6, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14],
+        'Images' : [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/380205/01/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/01/mod03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/01/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/01/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/01/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/01/sv04/fnd/PNA/fmt/png',
+        ],
+      },
+      '2' : {
+        'Price' : '80.00',
+        'Size' : [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14],
+        'Images' : [
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/380205/02/sv01/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/02/mod03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/02/bv/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/02/sv02/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/02/sv03/fnd/PNA/fmt/png',
+          'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/380205/02/sv04/fnd/PNA/fmt/png',
+        ],
+      },
+    },
+  },
+  //Fresh Foam X Vongo v5
+  {
+    'Title': 'Fresh Foam X Vongo v5',
+    'Ratings': 4.0,
+    'BackgroundColor': const Color(0XFF386E96),
+    'Colors' : [
+      Colors.blue,
+      Colors.black,
+    ],
+    'Description':
+    'Our Fresh Foam X Vongo v5 men’s running shoe is designed for the perfect blend of support and softness. Featuring a Fresh Foam midsole and a medial post, the Vongo is all about stability with every stride.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fmvngobp5_nb_02_i-removebg-preview.png?alt=media&token=2be87ac2-079b-4883-87fd-874424ed3a23',
+    'Products' : {
+      '0' : {
+        'Price' : '149.99',
+        'Size' : [8, 8.5, 9.5, 10, 10.5, 11.5, 12],
+        'Images': [
+          'https://nb.scene7.com/is/image/NB/mvngobp5_nb_02_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/mvngobp5_nb_05_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/mvngobp5_nb_03_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/mvngobp5_nb_04_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/mvngobp5_nb_06_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472'
+        ],
+      },
+      '1' : {
+        'Price' : '149.99',
+        'Size' : [9.5, 12, 13, 14],
+        'Images' : [
+          'https://nb.scene7.com/is/image/NB/mvngobw5_nb_02_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/mvngobw5_nb_05_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/mvngobw5_nb_03_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/mvngobw5_nb_04_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/mvngobw5_nb_06_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+        ],
+      },
+    },
+  },
+  //327 Lunar New Year
+  {
+    'Title': '327 Lunar New Year',
+    'Ratings': 4.2,
+    'BackgroundColor': const Color(0XFFC29F86),
+    'Colors' : [
+      [const Color(0XFFC9A587),Colors.black],
+      [Colors.black, Colors.pinkAccent],
+    ],
+    'Description':
+    'As recreational running established widespread popularity in the 1970s, the benchmark for running footwear shifted from mere existence to performance. While the era’s designs would be considered simple by today’s standards, the decade stands out as the moment when running shoes truly came into their own. The 327 sheds new light on the ‘70s as a time of innovation by boldly reshaping classic design elements with a thoroughly contemporary outlook. With an angular reworking of the tried-and-true wedge silhouette, outsize, asymmetrically applied ‘N’ branding, and wraparound, trail-inspired lug outsole, the 327 provides nothing less than a complete reimagination of our running heritage. The Lunar New Year Collection 327 helps usher in the Year of the Tiger, with a bold design focused on contrast and detail. A neutral upper is overlaid with suede, with mismatched embellishments appearing at the eyerows. The 327’s signature, large scale ‘N’ branding stands out in contrast, while a tiger camouflage tongue label serves as a subtle nod to the Year of the Tiger.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fu327cnp_nb_02_i-removebg-preview.png?alt=media&token=96086cfc-5d2a-4ca1-8d0e-7dcff2d0a3bd',
+    'Products' : {
+      '0' : {
+        'Price' : '109.99',
+        'Size' : [9, 9.5, 10, 10.5, 11, 11.5, 12],
+        'Images': [
+          'https://nb.scene7.com/is/image/NB/u327cnp_nb_02_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnp_nb_05_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnp_nb_03_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnp_nb_04_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnp_nb_07_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnp_nb_08_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnt_nb_09_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnp_nb_09_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnp_nb_06_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+        ],
+      },
+      '1' : {
+        'Price' : '109.99',
+        'Size' : [9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14, 15, 16],
+        'Images' : [
+          'https://nb.scene7.com/is/image/NB/u327cnt_nb_02_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnt_nb_05_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnt_nb_03_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnt_nb_04_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnt_nb_07_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnt_nb_08_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnt_nb_09_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/u327cnt_nb_06_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+        ],
+      },
+    },
+  },
+  //574 Rugged
+  {
+    'Title': '574 Rugged',
+    'Ratings': 4.4,
+    'BackgroundColor': Colors.black,
+    'Colors' : [
+      [Colors.black, Colors.white],
+      [const Color(0XFF271E5A), Colors.white],
+      [const Color(0XFFBEBAB7), Colors.white],
+    ],
+    'Description':
+    '‘The most New Balance shoe ever’ says it all, right? No, actually. The 574 might be our unlikeliest icon. The 574 was built to be a reliable shoe that could do a lot of different things well rather than as a platform for revolutionary technology, or as a premium materials showcase. This unassuming, unpretentious versatility is exactly what launched the 574 into the ranks of all-time greats. As hybrid road/trail design built on a wider last than the previous generation’s narrow racing silhouettes, the 574 offered a uniquely versatile mix of new, different, uncomplicated, rugged, durable, and comfortable that was adopted as a closet staple across the globe. That’s why today, the 574 is synonymous with the boundary defying New Balance style, and worn by anyone. This 574 Rugged edition features durable, rugged materials inspired by the outdoors.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fml574dgo_nb_02_i-removebg-preview.png?alt=media&token=9860cb3a-6cda-48a7-8e29-ec61a7e28d41',
+    'Products' : {
+      '0' : {
+        'Price' : '89.99',
+        'Size' : [4, 4.5, 5, 5.5, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 13, 16, 17, 18],
+        'Images': [
+          'https://nb.scene7.com/is/image/NB/ml574dgo_nb_02_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgo_nb_05_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgo_nb_03_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgo_nb_04_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgo_nb_07_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgo_nb_08_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgo_nb_09_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgo_nb_06_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+        ],
+      },
+      '1' : {
+        'Price' : '89.99',
+        'Size' : [8.5, 9, 10,],
+        'Images' : [
+          'https://nb.scene7.com/is/image/NB/ml574dgv_nb_02_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgv_nb_05_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgv_nb_03_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgv_nb_04_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgv_nb_07_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/ml574dgv_nb_06_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+        ],
+      },
+      '2' : {
+        'Price' : '89.99',
+        'Size' : [4, 4.5, 5, 5.5, 6, 7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14, 15, 16],
+        'Images' : [
+          'https://nb.scene7.com/is/image/NB/ml574dgg_nb_02_i?\$dw_detail_main_lg\$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600',
+          'https://nb.scene7.com/is/image/NB/ml574dgg_nb_05_i?\$dw_detail_main_lg\$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600',
+          'https://nb.scene7.com/is/image/NB/ml574dgg_nb_03_i?\$dw_detail_main_lg\$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600',
+          'https://nb.scene7.com/is/image/NB/ml574dgg_nb_04_i?\$dw_detail_main_lg\$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600',
+          'https://nb.scene7.com/is/image/NB/ml574dgg_nb_07_i?\$dw_detail_main_lg\$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600',
+          'https://nb.scene7.com/is/image/NB/ml574dgg_nb_06_i?\$dw_detail_main_lg\$&bgc=f1f1f1&layer=1&bgcolor=f1f1f1&blendMode=mult&scale=10&wid=1600&hei=1600',
+        ],
+      },
+    },
+  },
+  //New Balance x Aries Fresh Foam 1080v11
+  {
+    'Title': 'New Balance x Aries Fresh Foam 1080v11',
+    'Ratings': 2.4,
+    'BackgroundColor': Colors.red[400],
+    'Colors' : [
+      [Colors.red, Colors.black]
+    ],
+    'Description':
+    'With a luxury approach to craft and process combined with the anything goes, statement making outlook of streetwear, Aries embody the creative energy and fierce independence of their astrological namesake. With the ‘Unbalanced’ Fresh Foam X 1080v11, Aries infuse unrestrained individualism into the pinnacle New Balance runner. The Fresh Foam X and engineered knit construction of the 1080v11 is outfitted in Aries’ signature red and black palette, with fluorescent yellow and green details offering high contrast color pops. Prominent, asymmetrically applied New Balance and Aries co-branding creates a sense of intentional visual imperfection, as a reminder that personal achievement, rather than trophies and medals, is running’s main objective.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fm1080z11_nb_02_i-removebg-preview.png?alt=media&token=9640c20b-3734-4480-b1ad-fca3a948034a',
+    'Products' : {
+      '0' : {
+        'Price' : '179.99',
+        'Size' : [4, 5, 5.5, 8, 15, 16],
+        'Images': [
+          'https://nb.scene7.com/is/image/NB/m1080z11_nb_02_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/m1080z11_nb_05_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/m1080z11_nb_03_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/m1080z11_nb_04_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/m1080z11_nb_07_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/m1080z11_nb_06_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+        ],
+      },
+    },
+  },
+  //NB NUMERIC JAMIE FOY 306
+  {
+    'Title': 'NB NUMERIC JAMIE FOY 306',
+    'Ratings': 4.1,
+    'BackgroundColor': const Color(0XFF886C57),
+    'Colors' : [
+      [Colors.black, const Color(0XFF8F6F54)],
+    ],
+    'Description':
+    'Our New Balance Numeric Jamie Foy NM306 upgrades a classic vulcanized shoe design with choice features for lasting durability and comfort on your board. These skate shoes have a suede upper with a strong rubber underlay to withstand your toughest tricks as well as mesh panels for much-needed breathability and comfort. Plus, upgraded components throughout the shoe ensure a secure fit, solid grip and lasting protection.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fnm306bgm_nb_02_i-removebg-preview.png?alt=media&token=98019a56-2807-4dd0-a288-aea41d2ae0e9',
+    'Products' : {
+      '0' : {
+        'Price' : '89.99',
+        'Size' : [4, 5, 7, 7.5, 8, 8.5, 10, 11.5],
+        'Images': [
+          'https://nb.scene7.com/is/image/NB/nm306bgm_nb_02_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/nm306bgm_nb_04_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/nm306bgm_nb_03_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+          'https://nb.scene7.com/is/image/NB/nm306bgm_nb_06_i?\$pdpflexf2\$&fmt=webp&wid=472&hei=472',
+        ],
+      },
+    },
+  },
 ];
 
