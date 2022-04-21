@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project/connectivity_provider.dart';
-import 'package:project/no_internet.dart';
+import 'package:project/Internet_Connection/connectivity_provider.dart';
+import 'package:project/Internet_Connection/no_internet.dart';
 import 'package:provider/provider.dart';
 
 class ProductPage extends StatefulWidget {

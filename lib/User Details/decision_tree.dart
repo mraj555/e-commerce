@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project/User%20Details/log_in.dart';
 import 'package:project/User%20Details/verify_email_page.dart';
-import 'package:project/connectivity_provider.dart';
-import 'package:project/no_internet.dart';
+import 'package:project/Internet_Connection/connectivity_provider.dart';
+import 'package:project/Internet_Connection/no_internet.dart';
 import 'package:provider/provider.dart';
 
 class DecisionTree extends StatefulWidget {
