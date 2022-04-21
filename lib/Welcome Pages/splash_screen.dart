@@ -1,6 +1,9 @@
-import 'package:flutter/cupertino.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:project/User%20Details/decision_tree.dart';
 import 'package:project/Welcome%20Pages/onboarding.dart';
+import 'package:project/connectivity_provider.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -10,13 +13,16 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+  static final user = FirebaseAuth.instance.currentUser;
+
   @override
   void initState() {
     Future.delayed(
-      Duration(seconds: 3),
+      const Duration(seconds: 3),
       () => Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => const OnBoarding(),
+          builder: (context) => user == null ? const OnBoarding() : const DecisionTree(),
         ),
       ),
     );
@@ -31,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
         body: Container(
           height: double.infinity,
           width: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [
                 Colors.yellow,

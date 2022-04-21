@@ -1856,7 +1856,7 @@ List<Map<String, dynamic>> shoes = [
     'Products' : {
       '0' : {
         'Price' : '100.00',
-        'SIze' : [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14, 16],
+        'Size' : [7, 7.5, 8, 8.5, 9, 9.5, 10, 10.5, 11, 11.5, 12, 13, 14, 16],
         'Images': [
           'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/376107/02/sv01/fnd/PNA/fmt/png',
           'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_900,h_900/global/376107/02/fnd/PNA/fmt/png',

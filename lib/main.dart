@@ -1,19 +1,29 @@
-import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:project/User%20Details/decision_tree.dart';
-import 'package:project/product_page.dart';
+import 'package:project/Welcome%20Pages/splash_screen.dart';
+import 'package:project/connectivity_provider.dart';
+import 'package:provider/provider.dart';
+
+import 'User Details/decision_tree.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(
-    MaterialApp(
-      routes: {
-        '/signupdecision' : (context) => DecisionTree(),
-      },
-      debugShowCheckedModeBanner: false,
-      home: const DecisionTree(),
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => ConnectivityProvider(),
+          child: const SplashScreen(),
+        ),
+      ],
+      child: MaterialApp(
+        routes: {
+          '/signupdecision': (context) => const DecisionTree(),
+        },
+        debugShowCheckedModeBanner: false,
+        home: const SplashScreen(),
+      ),
     ),
   );
 }

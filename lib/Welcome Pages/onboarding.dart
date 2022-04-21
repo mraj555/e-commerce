@@ -1,9 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project/User%20Details/decision_tree.dart';
-import 'package:project/User%20Details/log_in.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoarding extends StatefulWidget {
@@ -79,7 +77,7 @@ class _OnBoardingState extends State<OnBoarding> {
                 padding: EdgeInsets.only(right: size.width * 0.02, top: size.height * 0.01),
                 child: TextButton(
                   onPressed: () {
-                    pageController.animateToPage(3, duration: Duration(milliseconds: 1000), curve: Curves.ease);
+                    pageController.animateToPage(3, duration: const Duration(milliseconds: 1000), curve: Curves.ease);
                   },
                   child: Text(
                     'SKIP',
@@ -111,7 +109,7 @@ class _OnBoardingState extends State<OnBoarding> {
                 child: InkWell(
                   onTap: () {
                     if (index != 3.0) {
-                      pageController.nextPage(duration: Duration(milliseconds: 50), curve: Curves.fastLinearToSlowEaseIn);
+                      pageController.nextPage(duration: const Duration(milliseconds: 50), curve: Curves.fastLinearToSlowEaseIn);
                     } else {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const DecisionTree()));
                     }

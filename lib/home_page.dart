@@ -6,7 +6,7 @@ import 'package:project/product_page.dart';
 import 'product_details.dart' as data;
 
 class Home extends StatefulWidget {
-  Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
   State<Home> createState() => _HomeState();
@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Color(0xfff7f6f6),
+      backgroundColor: const Color(0xfff7f6f6),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
           child: Image.asset('assets/logo.png', width: size.width * 0.1),
         ),
         toolbarHeight: size.width * 0.2,
-        title: Text(
+        title: const Text(
           'E-com',
           style: TextStyle(color: Colors.black),
         ),
@@ -128,7 +128,7 @@ class _HomeState extends State<Home> {
                           Align(
                             alignment: Alignment.topRight,
                             child: Padding(
-                              padding: EdgeInsets.fromLTRB(0, 20, 20, 0),
+                              padding: const EdgeInsets.fromLTRB(0, 20, 20, 0),
                               child: GestureDetector(
                                 onTap: () {
                                   setState(
@@ -171,13 +171,13 @@ class _HomeState extends State<Home> {
                                     Image.network(data.shoes[index]['ThumbnailURL'], width: size.width * 0.4),
                                   ],
                                 ),
-                                SizedBox(height: 20),
+                                const SizedBox(height: 20),
                                 Text(
                                   data.shoes[index]['Title'],
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.notoSerif(color: Colors.deepPurple),
                                 ),
-                                SizedBox(height: 10),
+                                const SizedBox(height: 10),
                                 RichText(
                                   textAlign: TextAlign.center,
                                   text: TextSpan(text: '\$', style: GoogleFonts.notoSerif(color: Colors.deepPurple), children: [
