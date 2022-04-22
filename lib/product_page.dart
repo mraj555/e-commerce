@@ -7,9 +7,10 @@ class ProductPage extends StatefulWidget {
   late bool isFavourite;
   final Map<String, dynamic> items;
   final String title;
+  final String? unit;
   final colors;
 
-  ProductPage({Key? key, required this.isFavourite, required this.items, required this.title, required this.colors}) : super(key: key);
+  ProductPage({Key? key,required this.unit, required this.isFavourite, required this.items, required this.title, required this.colors}) : super(key: key);
 
   @override
   State<ProductPage> createState() => _ProductPageState();
@@ -18,12 +19,12 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   PageController controller = PageController();
   int isSelected = 0;
-  Map<String, dynamic> images = {};
+  Map<String, dynamic> product = {};
 
   @override
   void initState() {
-    images = widget.items['0'];
-    print(images);
+    product = widget.items['0'];
+    print(product);
     Provider.of<ConnectivityProvider>(context, listen: false).startMonitoring();
     super.initState();
   }
@@ -85,7 +86,7 @@ class _ProductPageState extends State<ProductPage> {
                               height: size.height / 2.4,
                               child: PageView(
                                 controller: controller,
-                                children: List.generate(images['Images'].length, (index) => Image.network(images['Images'][index])),
+                                children: List.generate(product['Images'].length, (index) => Image.network(product['Images'][index])),
                               ),
                             ),
                             Container(
@@ -98,7 +99,7 @@ class _ProductPageState extends State<ProductPage> {
                                     widget.title,
                                     style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                                   ),
-                                  Row(
+                                  product['Size'] != null && widget.unit != null ? Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
                                       const Text('Size : '),
@@ -109,7 +110,7 @@ class _ProductPageState extends State<ProductPage> {
                                             shrinkWrap: true,
                                             scrollDirection: Axis.horizontal,
                                             children: List.generate(
-                                              images['Size'].length,
+                                              product['Size'].length,
                                               (index) => InkWell(
                                                 onTap: () {
                                                   setState(
@@ -128,7 +129,7 @@ class _ProductPageState extends State<ProductPage> {
                                                     alignment: Alignment.center,
                                                     padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
                                                     child: Text(
-                                                      'US ${images['Size'][index]}',
+                                                      ' ${widget.unit} ${product['Size'][index]}',
                                                       style: const TextStyle(fontWeight: FontWeight.w600),
                                                     ),
                                                     constraints: const BoxConstraints(
@@ -142,7 +143,7 @@ class _ProductPageState extends State<ProductPage> {
                                         ),
                                       ),
                                     ],
-                                  ),
+                                  ) : const SizedBox(),
                                   Row(
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: [
@@ -161,7 +162,7 @@ class _ProductPageState extends State<ProductPage> {
                                                   onTap: () {
                                                     setState(
                                                       () {
-                                                        images = widget.items['${index}'];
+                                                        product = widget.items['${index}'];
                                                       },
                                                     );
                                                   },
@@ -216,7 +217,7 @@ class _ProductPageState extends State<ProductPage> {
                                   children: [
                                     Text('\$ '),
                                     Text(
-                                      images['Price'],
+                                      product['Price'],
                                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                                     ),
                                   ],

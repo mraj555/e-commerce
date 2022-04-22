@@ -14,7 +14,7 @@ void main() async {
       providers: [
         ChangeNotifierProvider(
           create: (context) => ConnectivityProvider(),
-          child: const SplashScreen(),
+          child: const DecisionTree(),
         ),
       ],
       child: MaterialApp(
@@ -22,7 +22,7 @@ void main() async {
           '/signupdecision': (context) => const DecisionTree(),
         },
         debugShowCheckedModeBanner: false,
-        home: const SplashScreen(),
+        home: const DecisionTree(),
       ),
     ),
   );

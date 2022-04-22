@@ -16,10 +16,12 @@ class _HomeState extends State<Home> {
   var user = FirebaseAuth.instance.currentUser;
 
   List<String> items = ['Shoes', 'Watch', 'Backpack'];
-
+  List products = [data.shoes, data.watches, data.backpack];
   List<String> images = ['sneakers.png', 'watch.png', 'backpack.png'];
   var isFavourite = List.generate(data.shoes.length, (index) => false);
   var currentIndex = 0;
+  var currentProduct = data.shoes;
+
 
   @override
   Widget build(BuildContext context) {
@@ -63,6 +65,7 @@ class _HomeState extends State<Home> {
                 ),
               ],
             ),
+            SizedBox(height: size.width * 0.01),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List.generate(
@@ -72,6 +75,7 @@ class _HomeState extends State<Home> {
                     setState(
                       () {
                         currentIndex = index;
+                        currentProduct = products[index];
                       },
                     );
                   },
@@ -103,9 +107,10 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
+            SizedBox(height: size.width * 0.03),
             Expanded(
               child: GridView.builder(
-                itemCount: data.shoes.length,
+                itemCount: currentProduct.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 5, childAspectRatio: 0.6),
                 itemBuilder: (context, index) {
                   return InkWell(
@@ -113,10 +118,11 @@ class _HomeState extends State<Home> {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) => ProductPage(
-                            colors: data.shoes[index]['Colors'],
+                            unit: currentProduct[index]['Unit'],
+                            colors: currentProduct[index]['Colors'],
                             isFavourite: isFavourite[index],
-                            items: data.shoes[index]['Products'],
-                            title: data.shoes[index]['Title'],
+                            items: currentProduct[index]['Products'],
+                            title: currentProduct[index]['Title'],
                           ),
                         ),
                       );
@@ -159,21 +165,21 @@ class _HomeState extends State<Home> {
                                   children: [
                                     CircleAvatar(
                                       radius: 70,
-                                      backgroundColor: data.shoes[index]['BackgroundColor'].withOpacity(0.5),
+                                      backgroundColor: currentProduct[index]['BackgroundColor'].withOpacity(0.5),
                                       child: CircleAvatar(
                                         radius: 60,
                                         child: Container(
                                           decoration: BoxDecoration(color: Colors.transparent, shape: BoxShape.circle, border: Border.all(color: Colors.white)),
                                         ),
-                                        backgroundColor: data.shoes[index]['BackgroundColor'].withOpacity(0.01),
+                                        backgroundColor: currentProduct[index]['BackgroundColor'].withOpacity(0.01),
                                       ),
                                     ),
-                                    Image.network(data.shoes[index]['ThumbnailURL'], width: size.width * 0.4),
+                                    Image.network(currentProduct[index]['ThumbnailURL'], width: size.width * 0.4), /* 0.4 - Shoes , 0.25 - Watches */
                                   ],
                                 ),
                                 const SizedBox(height: 20),
                                 Text(
-                                  data.shoes[index]['Title'],
+                                  currentProduct[index]['Title'],
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.notoSerif(color: Colors.deepPurple),
                                 ),
@@ -181,7 +187,7 @@ class _HomeState extends State<Home> {
                                 RichText(
                                   textAlign: TextAlign.center,
                                   text: TextSpan(text: '\$', style: GoogleFonts.notoSerif(color: Colors.deepPurple), children: [
-                                    TextSpan(text: '${data.shoes[index]['Products']['0']['Price']}', style: GoogleFonts.notoSerif(color: Colors.deepPurple, fontWeight: FontWeight.bold, fontSize: 20)),
+                                    TextSpan(text: '${currentProduct[index]['Products']['0']['Price']}', style: GoogleFonts.notoSerif(color: Colors.deepPurple, fontWeight: FontWeight.bold, fontSize: 20)),
                                   ]),
                                 ),
                               ],

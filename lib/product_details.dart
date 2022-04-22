@@ -9,6 +9,7 @@ List<Map<String, dynamic>> shoes = [
     'Colors': [
       [Colors.black, Colors.red]
     ],
+    'Unit' : 'US',
     'Description':
         'The Jordan Flight Club 91 has a design that throws back to basketball\'s golden age and the sneakers that reigned supreme. The Air Jordan 6 is the muse, with visible Air cushioning, cutouts in the collar, and a windowed tongue reminiscent of MJ\'s classic game shoe. The 91 has a structured frame of genuine and synthetic leather containing an inner bootie, providing a snug and secure fit.',
     'ThumbnailURL':
@@ -35,6 +36,7 @@ List<Map<String, dynamic>> shoes = [
     'Title': 'Air Jordan 1 Zoom Cmft',
     'Ratings': 5.0,
     'BackgroundColor': Colors.orange,
+    'Unit' : 'US',
     'Colors': [
       [const Color(0XFFB78727), const Color(0XFF353C40)]
     ],
@@ -63,6 +65,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Nike LeBron 8',
     'Ratings': 4.2,
+    'Unit' : 'US',
     'BackgroundColor': Colors.lightGreenAccent,
     'Colors': [const Color(0XFF353E5D)],
     'Description':
@@ -92,6 +95,7 @@ List<Map<String, dynamic>> shoes = [
   //Air Max Dawn
   {
     'Title': 'Air Max Dawn',
+    'Unit' : 'US',
     'Ratings': 4.8,
     'BackgroundColor': Colors.amber,
     'Colors': [
@@ -257,6 +261,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Jordan Delta 2 SE',
     'Ratings': 3.5,
+    'Unit' : 'US',
     'BackgroundColor': Colors.grey,
     'Colors': [
       [const Color(0XFF939F9E), const Color(0XFFADB9B4)]
@@ -286,6 +291,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Jordan Why Not .5',
     'Ratings': 3.7,
+    'Unit' : 'US',
     'BackgroundColor': Colors.pinkAccent,
     'Colors': [
       [Colors.black, const Color(0XFFB92B6D)]
@@ -315,6 +321,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Jordan Point Lane',
     'Ratings': 4.4,
+    'Unit' : 'US',
     'BackgroundColor': Colors.blueGrey,
     'Colors': [
       [const Color(0XFF737D84), const Color(0XFF8C92AC)],
@@ -359,6 +366,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Zion 1',
     'Ratings': 4.7,
+    'Unit' : 'US',
     'BackgroundColor': Colors.tealAccent,
     'Colors': [
       [const Color(0XFF40E0D0), const Color(0XFFCEA675)],
@@ -418,6 +426,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Nike Air Zoom Alphafly',
     'Rating': 5.0,
+    'Unit' : 'US',
     'BackgroundColor': Colors.deepOrange,
     'ThumbnailURL':
         'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Shoes%2Fair-zoom-alphafly-next-flyknit-ekiden-road-racing-shoes-fNntgL-removebg-preview.png?alt=media&token=4929c1dd-c054-4d4b-ae19-c8a23f344155',
@@ -480,6 +489,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Nike Blazer Mid',
     'Ratings': 4.1,
+    'Unit' : 'US',
     'BackgroundColor': Colors.black12,
     'Colors': [
       [Colors.black, const Color(0XFFFF1A1A)]
@@ -509,6 +519,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Nike Air Max Plus',
     'Ratings': 3.9,
+    'Unit' : 'US',
     'BackgroundColor': Colors.orangeAccent,
     'Colors': [
       [Colors.white, const Color(0XFFFB9912)],
@@ -632,6 +643,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Terrex Swift R3',
     'Ratings': 4.3,
+    'Unit' : 'US',
     'BackgroundColor': Colors.red,
     'Colors': [
       [const Color(0XFFA7977B), Colors.black],
@@ -731,6 +743,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Nike Air Max 270',
     'Ratings': 4.7,
+    'Unit' : 'US',
     'BackgroundColor': Colors.black38,
     'Colors': [
       [Colors.black, Colors.white],
@@ -875,6 +888,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'ZX 5K BOOST',
     'Ratings': 4.8,
+    'Unit' : 'US',
     'BackgroundColor': Colors.amber,
     'Colors': [
       [const Color(0XFFEAEAF1), const Color(0XFFDDC48C)],
@@ -989,6 +1003,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'ULTRABOOST CLIMACOOL 2',
     'Ratings': 4.8,
+    'Unit' : 'US',
     'BackgroundColor': const Color(0XFFF99001),
     'Colors': [
       [Colors.orange, const Color(0XFFD2590C)],
@@ -1085,6 +1100,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'RACER TR21',
     'Ratings': 4.2,
+    'Unit' : 'US',
     'BackgroundColor': Colors.grey,
     'Colors': [
       [const Color(0XFFB5B7BF), const Color(0XFF95989F)],
@@ -1286,6 +1302,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'ZX 8000 LEGO®',
     'BackgroundColor': Colors.amber[300],
+    'Unit' : 'US',
     'Colors': [
       [Colors.white, Colors.red]
     ],
@@ -1317,6 +1334,7 @@ List<Map<String, dynamic>> shoes = [
   //TERREX AX4 PRIMEGREEN HIKING SHOES
   {
     'Title': 'TERREX AX4 PRIMEGREEN',
+    'Unit' : 'US',
     'Ratings': 4.3,
     'BackgroundColor': const Color(0XFF339FC9),
     'Colors': [
@@ -1419,6 +1437,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'FORUM EXHIBIT LOW',
     'Ratings': 4.7,
+    'Unit' : 'US',
     'BackgroundColor': Colors.black,
     'Colors' : [
       [Colors.black, const Color(0XFF7D4757)],
@@ -1504,6 +1523,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'FORUM LOW SHOES',
     'Ratings': 4.7,
+    'Unit' : 'US',
     'BackgroundColor': Colors.red,
     'Colors' : [
       [Colors.white, Colors.red],
@@ -1696,6 +1716,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'FORUM MID SHOES',
     'Ratings': 4.7,
+    'Unit' : 'US',
     'BackgroundColor': const Color(0XFFEC7768),
     'Colors' : [
       [Colors.black, const Color(0XFFF49581)],
@@ -1808,6 +1829,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Scuderia Ferrari Speedcat',
     'Ratings': 4.0,
+    'Unit' : 'US',
     'BackgroundColor': Colors.amber,
     'Colors' : [Colors.amber, Colors.red],
     'Description':
@@ -1845,6 +1867,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Court Rider Pop',
     'Ratings': 5.0,
+    'Unit' : 'US',
     'BackgroundColor': const Color(0XFF556362),
     'Colors' : [
       [Colors.white, const Color(0XFF748C7C)]
@@ -1872,6 +1895,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Voyage Nitro Gore-Tex',
     'Ratings': 3.6,
+    'Unit' : 'US',
     'BackgroundColor': const Color(0XFF1A7C76),
     'Colors' : [[const Color(0XFF29B7A6), Colors.black]],
     'Description':
@@ -1900,6 +1924,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'BMW MMS RS-Z',
     'Ratings': 4.5,
+    'Unit' : 'US',
     'BackgroundColor': Colors.orange,
     'Colors' : [
       [Colors.orange, Colors.black],
@@ -1942,6 +1967,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Slipstream Lo Reprise',
     'Ratings': 3.7,
+    'Unit' : 'US',
     'BackgroundColor': Colors.blueGrey,
     'Colors' : [
       [Colors.grey, Colors.white],
@@ -1982,6 +2008,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Suede Mid XXI',
     'Ratings': 3.7,
+    'Unit' : 'US',
     'BackgroundColor': Colors.redAccent,
     'Colors' : [
       [Colors.red, Colors.white],
@@ -2038,6 +2065,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'Fresh Foam X Vongo v5',
     'Ratings': 4.0,
+    'Unit' : 'US',
     'BackgroundColor': const Color(0XFF386E96),
     'Colors' : [
       Colors.blue,
@@ -2076,6 +2104,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': '327 Lunar New Year',
     'Ratings': 4.2,
+    'Unit' : 'US',
     'BackgroundColor': const Color(0XFFC29F86),
     'Colors' : [
       [const Color(0XFFC9A587),Colors.black],
@@ -2121,6 +2150,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': '574 Rugged',
     'Ratings': 4.4,
+    'Unit' : 'US',
     'BackgroundColor': Colors.black,
     'Colors' : [
       [Colors.black, Colors.white],
@@ -2176,6 +2206,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'New Balance x Aries Fresh Foam 1080v11',
     'Ratings': 2.4,
+    'Unit' : 'US',
     'BackgroundColor': Colors.red[400],
     'Colors' : [
       [Colors.red, Colors.black]
@@ -2203,6 +2234,7 @@ List<Map<String, dynamic>> shoes = [
   {
     'Title': 'NB NUMERIC JAMIE FOY 306',
     'Ratings': 4.1,
+    'Unit' : 'US',
     'BackgroundColor': const Color(0XFF886C57),
     'Colors' : [
       [Colors.black, const Color(0XFF8F6F54)],
@@ -2226,3 +2258,487 @@ List<Map<String, dynamic>> shoes = [
   },
 ];
 
+List<Map<String, dynamic>> watches = [
+  //Gen 6 Bradshaw Two-Tone Smartwatch
+  {
+    'Title' : 'Gen 6 Bradshaw',
+    'Ratings' : 4.3,
+    'Unit' : 'MM',
+    'BackgroundColor' : Colors.grey,
+    'Colors' : [
+      [Color(0XFFEAEBEA), Color(0XFFEBCEA6)],
+    ],
+    'Description':
+    'Our Gen 6 Bradshaw smartwatch is the perfect combination of brains and beauty. Crafted from two-tone stainless steel, this state-of-the-art timepiece is equipped with a host of wellness features including a heart-rate monitor, an SPO2 sensor to track your breathing and sleep readings to improve your snooze. Capable of charging two times faster than other leading smartwatch styles, this device will support you every step of the way.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Watches%2FMKT5134V-0991_1-removebg-preview.png?alt=media&token=9fba1071-51b5-40f0-872b-1e6630665dea',
+    'Products' : {
+      '0' : {
+        'Price' : '350.00',
+        'Size' : [44],
+        'Images' : [
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5134V-0991_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5134V-0991_2?wid=1300',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5134V-0991_3?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5134V-0991_4?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5134V-0991_6?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          ],
+      },
+    },
+  },
+  //Gen 6 Bradshaw Pavé Gold-Tone Smartwatch
+  {
+    'Title' : 'Gen 6 Bradshaw Pavé',
+    'Ratings' : 5.0,
+    'Unit' : 'MM',
+    'BackgroundColor' : Color(0XFFE0C498).withOpacity(0.5),
+    'Colors' : [
+      Color(0XFFE0C498),
+    ],
+    'Description':
+    'Our Gen 6 Bradshaw smartwatch is the perfect combination of brains and beauty. Crafted from two-tone stainless steel, this state-of-the-art timepiece is equipped with a host of wellness features including a heart-rate monitor, an SPO2 sensor to track your breathing and sleep readings to improve your snooze. Capable of charging two times faster than other leading smartwatch styles, this device will support you every step of the way.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Watches%2FMKT5136V-0710_1-removebg-preview.png?alt=media&token=fe984132-8d4d-4a94-be81-9951149c8b6b',
+    'Products' : {
+      '0' : {
+        'Price' : '425.00',
+        'Size' : [44],
+        'Images' : [
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5136V-0710_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5136V-0710_2?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5136V-0710_3?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5136V-0710_4?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5136V-0710_6?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          ],
+      },
+    },
+  },
+  //Michael Kors Access Gen 5E MKGO Rose Gold-Tone and Logo Rubber Smartwatch
+  {
+    'Title' : 'Gen 5E MKGO',
+    'Ratings' : 5.0,
+    'Unit' : 'MM',
+    'BackgroundColor' : Color(0XFFC5C4C4).withOpacity(0.5),
+    'Colors' : [
+      Color(0XFFC5C4C4),
+    ],
+    'Description':
+    'Sport-luxe style: featuring a logo-embossed strap, our Michael Kors Access Gen 5E MKGO 2 smartwatch will effortlessly complement your on-the-go, active lifestyle. Designed from lightweight rose gold-tone aluminum and powered by Wear OS by Google™, this pavé-accented timepiece is equipped with estimated heart-rate tracking, payment methods, a built-in speaker for Bluetooth-enabled calling and more to keep you connected to your daily goals. The multiple display faces can be changed for the ultimate in customization.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Watches%2FMKT5141V-0100_1-removebg-preview.png?alt=media&token=df93223b-a901-4ca0-9d6a-e6fd765f7e16',
+    'Products' : {
+      '0' : {
+        'Price' : '250.00',
+        'Size' : [43],
+        'Images' : [
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5141V-0100_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5141V-0100_2?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5141V-0100_3?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          ],
+      },
+    },
+  },
+  //Gen 5E Darci Pavé Rose Gold-Tone Smartwatch
+  {
+    'Title' : 'Gen 5E Darci',
+    'Ratings' : 3.3,
+    'Unit' : 'MM',
+    'BackgroundColor' : Color(0XFFE1BAA6).withOpacity(0.5),
+    'Colors' : [
+      Color(0XFFE1BAA6),
+    ],
+    'Description':
+    'A little glam, a little next-generation technology—our pavé-accented Gen 5E Darci smartwatch delivers refined style for everyday wear. Crafted from rose gold-tone stainless steel and powered by Wear OS by Google™, this timepiece features a built-in speaker for Bluetooth-enabled calling, estimated heart-rate tracking, payment methods and more to support your daily wellness needs.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Watches%2FMKT5128V-0622_1-removebg-preview.png?alt=media&token=8dff2fe4-066e-43b6-aaa4-04b4d04aead2',
+    'Products' : {
+      '0' : {
+        'Price' : '350.00',
+        'Size' : [43],
+        'Images' : [
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5128V-0622_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5128V-0622_2?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5128V-0622_3?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5128V-0622_5?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5128V-0622_7?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5128V-0622_8?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5128V-0622_9?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          ],
+      },
+    },
+  },
+  //Gen 6 Bradshaw Rose Gold-Tone Smartwatch
+  {
+    'Title' : 'Gen 6 Bradshaw Rose Gold',
+    'Ratings' : 2.7,
+    'Unit' : 'MM',
+    'BackgroundColor' : Color(0XFFE4BDA3).withOpacity(0.5),
+    'Colors' : [
+      Color(0XFFE4BDA3),
+    ],
+    'Description':
+    'Our Gen 6 Bradshaw smartwatch is the perfect combination of brains and beauty. Crafted from rose-gold tone stainless steel, this state-of-the-art timepiece is equipped with a host of wellness features including a heart-rate monitor, an SPO2 sensor to track your breathing and sleep readings to improve your snooze. Capable of charging two times faster than other leading smartwatch styles, this device will support you every step of the way.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Watches%2FMKT5133V-0622_1-removebg-preview.png?alt=media&token=c26c5183-bae6-4539-a682-8386d481815a',
+    'Products' : {
+      '0' : {
+        'Price' : '350.00',
+        'Size' : [44],
+        'Images' : [
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5133V-0622_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5133V-0622_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5133V-0622_2?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5133V-0622_3?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5133V-0622_4?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5133V-0622_6?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90'
+          ],
+      },
+    },
+  },
+  //Gen 6 Bradshaw Pavé Rose Gold-Tone Smartwatch
+  {
+    'Title' : 'Gen 6 Bradshaw Pavé Rose',
+    'Ratings' : 5.0,
+    'Unit' : 'MM',
+    'BackgroundColor' : Color(0XFFE6BEA3).withOpacity(0.5),
+    'Colors' : [
+      Color(0XFFE6BEA3),
+    ],
+    'Description':
+    'Our Gen 6 Bradshaw smartwatch is the perfect combination of brains and beauty. Crafted from rose-gold tone stainless steel, this state-of-the-art timepiece is equipped with a host of wellness features including a heart-rate monitor, an SPO2 sensor to track your breathing and sleep readings to improve your snooze. Capable of charging two times faster than other leading smartwatch styles, this device will support you every step of the way.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Watches%2FMKT5135V-0622_1-removebg-preview.png?alt=media&token=5378cf55-3e05-4b3c-bbce-1d147ae63f86',
+    'Products' : {
+      '0' : {
+        'Price' : '350.00',
+        'Size' : [44],
+        'Images' : [
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5135V-0622_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5135V-0622_2?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5135V-0622_3?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5135V-0622_4?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5135V-0622_6?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          ],
+      },
+    },
+  },
+  //Gen 5E Darci Pavé Gold-Tone Smartwatch
+  {
+    'Title' : 'Gen 5E Darci Pavé Gold',
+    'Ratings' : 4.2,
+    'Unit' : 'MM',
+    'BackgroundColor' : Color(0XFFDDC69A).withOpacity(0.5),
+    'Colors' : [
+      Color(0XFFDDC69A),
+    ],
+    'Description':
+    'A little glam, a little next-generation technology—our pavé-accented Gen 5E Darci smartwatch delivers refined style for everyday wear. Crafted from gold-tone stainless steel and powered by Wear OS by Google™, this timepiece features a built-in speaker for Bluetooth-enabled calling, estimated heart-rate tracking, payment methods and more to support your daily wellness needs.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Watches%2FMKT5127V-0710_1-removebg-preview.png?alt=media&token=56abe8f7-67aa-4782-abfb-b5325c357cd9',
+    'Products' : {
+      '0' : {
+        'Price' : '350.00',
+        'Size' : [43],
+        'Images' : [
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5127V-0710_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5127V-0710_2?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5127V-0710_3?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5127V-0710_5?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5127V-0710_7?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5127V-0710_8?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5127V-0710_9?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          ],
+      },
+    },
+  },
+  //Gen 5E Darci Pavé Two-Tone Smartwatch
+  {
+    'Title' : 'Gen 5E Darci Pavé Two',
+    'Ratings' : 4.2,
+    'Unit' : 'MM',
+    'BackgroundColor' : Color(0XFFC1C0C0).withOpacity(0.5),
+    'Colors' : [
+      [Color(0XFFC1C0C0), Color(0XFFDCBAA7)],
+    ],
+    'Description':
+    'A little glam, a little next-generation technology—our pavé-accented Gen 5E Darci smartwatch delivers refined style for everyday wear. Crafted from gold-tone stainless steel and powered by Wear OS by Google™, this timepiece features a built-in speaker for Bluetooth-enabled calling, estimated heart-rate tracking, payment methods and more to support your daily wellness needs.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Watches%2FMKT5129V-0991_1-removebg-preview.png?alt=media&token=6cbcb48e-0c95-40ce-9b17-828ba5985c47',
+    'Products' : {
+      '0' : {
+        'Price' : '350.00',
+        'Size' : [43],
+        'Images' : [
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5129V-0991_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5129V-0991_2?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5129V-0991_3?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5129V-0991_5?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5129V-0991_7?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5129V-0991_8?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5129V-0991_9?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          ],
+      },
+    },
+  },
+  //Michael Kors Access Gen 5E MKGO Two-Tone and Logo Rubber Smartwatch
+  {
+    'Title' : 'Access Gen 5E MKGO',
+    'Ratings' : 3.8,
+    'Unit' : 'MM',
+    'BackgroundColor' : Colors.black.withOpacity(0.5),
+    'Colors' : [
+      Colors.black,
+    ],
+    'Description':
+    'Sport-luxe style: featuring a logo-embossed strap, our Michael Kors Access Gen 5E MKGO 2 smartwatch will effortlessly complement your on-the-go, active lifestyle. Designed from lightweight two-tone aluminum and powered by Wear OS by Google™, this pave-accented timepiece is equipped with estimated heart-rate tracking, payment methods, a built-in speaker for Bluetooth-enabled calling and more to keep you connected to your daily goals. The multiple display faces can be changed for the ultimate in customization.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Watches%2FMKT5118V-0001_1-removebg-preview.png?alt=media&token=c12d2065-c5dd-407d-8d3d-c8c23e8c4d9b',
+    'Products' : {
+      '0' : {
+        'Price' : '250.00',
+        'Size' : [43],
+        'Images' : [
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5118V-0001_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5118V-0001_2?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5118V-0001_3?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5118V-0001_4?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5118V-0001_5?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5118V-0001_6?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+           ],
+      },
+    },
+  },
+  //Michael Kors Access Gen 6E MKGO Pink-Tone and Logo Rubber Smartwatch
+  {
+    'Title' : 'Access Gen 6E MKGO',
+    'Ratings' : 4.1,
+    'Unit' : 'MM',
+    'BackgroundColor' : Color(0XFFC69D9A).withOpacity(0.5),
+    'Colors' : [
+      Color(0XFFC69D9A),
+    ],
+    'Description':
+    'Sport-luxe style: featuring a logo-embossed strap, our Michael Kors Access Gen 5E MKGO 2 smartwatch will effortlessly complement your on-the-go, active lifestyle. Designed from lightweight two-tone aluminum and powered by Wear OS by Google™, this pave-accented timepiece is equipped with estimated heart-rate tracking, payment methods, a built-in speaker for Bluetooth-enabled calling and more to keep you connected to your daily goals. The multiple display faces can be changed for the ultimate in customization.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/Watches%2FMKT5116V-0650_1-removebg-preview.png?alt=media&token=5599a605-3842-4391-9e1a-8f65f13d7d8b',
+    'Products' : {
+      '0' : {
+        'Price' : '250.00',
+        'Size' : [43],
+        'Images' : [
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5116V-0650_1?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5116V-0650_2?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5116V-0650_3?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5116V-0650_5?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5116V-0650_7?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5116V-0650_8?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          'https://michaelkors.scene7.com/is/image/MichaelKors/MKT5116V-0650_9?wid=558&hei=748&op_sharpen=1&resMode=sharp2&qlt=90',
+          ],
+      },
+    },
+  },
+];
+
+List<Map<String, dynamic>> backpack = [
+  //NATIONAL BACKPACK
+  {
+    'Title' : 'NATIONAL BACKPACK',
+    'Ratings' : 4.8,
+    'BackgroundColor' : Colors.black.withOpacity(0.5),
+    'Colors' : [
+      Colors.black,
+      Colors.blueGrey,
+    ],
+    'Description':
+    'Stash, zip, go. You\'ve got just what you need for the day ahead, thanks to your adidas backpack. Water bottle, ear buds, even your laptop. All stowed away and easily within reach.This product is made with recycled content as part of our ambition to end plastic waste.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/BackPack%2FNational_Backpack_Black_EX6745_01_standard-removebg-preview.png?alt=media&token=927bf2d1-e85c-49e1-88ce-355ba2380787',
+    'Products' : {
+      '0' : {
+        'Price' : '30.00',
+        'Images' : [
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a5baab1fa31f4933838aaca6011530db_9366/National_Backpack_Black_EX6745_01_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7e3d1af346c846f0a9d8aca601163d6b_9366/National_Backpack_Black_EX6745_02_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/02e8a8d257d4423b8dc3aca601157841_9366/National_Backpack_Black_EX6745_04_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7209a26b0c3a480fb239aca60114eb16_9366/National_Backpack_Black_EX6745_05_hover_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/efd20195878b467e94e8aca60115ef05_9366/National_Backpack_Black_EX6745_41_detail.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/666297faf7ad48b685a9aca6011488a4_9366/National_Backpack_Black_EX6745_42_detail.jpg',
+          ],
+      },
+      '1' : {
+        'Price' : '30.00',
+        'Images' : [
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c3e13dcdd0c74bd29638ac9f00583360_9366/National_Backpack_Grey_EX6742_01_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/27e473fa0d6c4784a92eac9f00559dfe_9366/National_Backpack_Grey_EX6742_02_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8bd20c0df7ba4a64bb09ac9f00611214_9366/National_Backpack_Grey_EX6742_04_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ac468bbd4de942cd916bac9f006095ed_9366/National_Backpack_Grey_EX6742_05_hover_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ec5f3f7a75284dc885e3ac9f00591a34_9366/National_Backpack_Grey_EX6742_41_detail.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2c36314446e6435080baac9f0059a1d6_9366/National_Backpack_Grey_EX6742_42_detail.jpg',
+           ],
+      },
+    },
+  },
+  //RIDEVENTURE BACKPACK - REVERSIBLE BLACK
+  {
+    'Title' : 'RIDEVENTURE BACKPACK',
+    'Ratings' : 4.1,
+    'BackgroundColor' : Color(0XFF151A7B).withOpacity(0.5),
+    'Colors' : [
+      [Color(0XFF272835), Color(0XFF783235)],
+      Color(0XFF333126),
+      Colors.black,
+    ],
+    'Description':
+    'Inspired by the training pitch, engineered for real life. The inclusion of boot and ball compartments point to this adidas Tiro 21 backpack\'s soccer roots. Stabilizing compression straps and moisture-absorbing AEROREADY combines to keep you comfortable when you\'re on the move.This product is made with recycled content as part of our ambition to end plastic waste.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/BackPack%2Fmfroyenroy04_1ws-removebg-preview.png?alt=media&token=6a5acb3d-5dd6-4ae7-b66a-7dcec52cbf2b',
+    'Products' : {
+      '0' : {
+        'Price' : '34.00',
+        'Images' : [
+          'https://store.royalenfield.com/media/catalog/product/m/f/mfroyenroy04_1ws.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/m/f/mfroyenroy04_2ws.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/m/f/mfroyenroy04_3ws.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/m/f/mfroyenroy04_4ws.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/r/o/roy04_1ws.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+        ],
+      },
+      '1' : {
+        'Price' : '34.00',
+        'Images' : [
+          'https://store.royalenfield.com/media/catalog/product/b/g/bgaw21001olive_3re.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/b/g/bgaw21001olive_4re.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/b/g/bgaw21001olive_1re.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/b/g/bgaw21001olive_2re.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/m/f/mfroyenroy06_4ws_1.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+        ],
+      },
+      '2' : {
+        'Price' : '34.00',
+        'Images' : [
+          'https://store.royalenfield.com/media/catalog/product/m/f/mfroyenroy01_1ws.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/m/f/mfroyenroy01_2ws.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/m/f/mfroyenroy01_3ws.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+          'https://store.royalenfield.com/media/catalog/product/m/f/mfroyenroy01_4ws.jpg?width=550&height=550&canvas=550:550&quality=80&bg-color=255,255,255&fit=bounds',
+        ],
+      },
+    },
+  },
+  //LEAGUE 3-STRIPES BACKPACK
+  {
+    'Title' : 'LEAGUE 3-STRIPES',
+    'Ratings' : 4.7,
+    'BackgroundColor' : Colors.grey.withOpacity(0.5),
+    'Colors' : [
+      Colors.grey,
+      Colors.black,
+    ],
+    'Description':
+    'Make your work-to-workout transition that much easier with this adidas backpack. A roomy main compartment offers plenty of space for your gym clothes and workday essentials. An inner sleeve stores your laptop, and a zip pocket on the front lets you keep important items close. Easy right?',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/BackPack%2FLeague_3-Stripes_Backpack_Grey_EX6944_01_standard-removebg-preview.png?alt=media&token=e18c2330-76df-4c3d-ae7b-7ba1e6ccb276',
+    'Products' : {
+      '0' : {
+        'Price' : '33.00',
+        'Images' : [
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7e44f295648747dabf30ad49001a0615_9366/League_3-Stripes_Backpack_Grey_EX6944_01_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d6e13b7d79154e71854dad490019892c_9366/League_3-Stripes_Backpack_Grey_EX6944_02_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/882048fe621c42b486acad49001a8af9_9366/League_3-Stripes_Backpack_Grey_EX6944_04_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2f633f97dc194bb9a911ad49001a4914_9366/League_3-Stripes_Backpack_Grey_EX6944_05_hover_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/6f8466bab9e24c6190d8acdb001ed09b_9366/League_3-Stripes_Backpack_Grey_EX6944_41_detail.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c7f98447d50d431b84e3ad49001ac988_9366/League_3-Stripes_Backpack_Grey_EX6944_42_detail.jpg',
+        ],
+      },
+      '1' : {
+        'Price' : '33.00',
+        'Images' : [
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/43b4d8f6e48c4d93a849ac9f00641043_9366/League_3-Stripes_Backpack_Black_EX6945_01_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/802c84809304482e927bac9f00666504_9366/League_3-Stripes_Backpack_Black_EX6945_02_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/6952aafefc5f45938241ac9f00670c94_9366/League_3-Stripes_Backpack_Black_EX6945_04_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/58397402e3dc4d89a7ecac9f006629fb_9366/League_3-Stripes_Backpack_Black_EX6945_05_hover_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/787f88f8c74345a4ada3ac9f0063807b_9366/League_3-Stripes_Backpack_Black_EX6945_41_detail.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1706ae3977ad488c93efac9f0065c441_9366/League_3-Stripes_Backpack_Black_EX6945_42_detail.jpg',
+        ],
+      },
+    },
+  },
+  //TIRO 21 AEROREADY BACKPACK
+  {
+    'Title' : 'TIRO 21 AEROREADY',
+    'Ratings' : 4.8,
+    'BackgroundColor' : Colors.black.withOpacity(0.5),
+    'Colors' : [
+      Colors.black,
+    ],
+    'Description':
+    'Inspired by the training pitch, engineered for real life. The inclusion of boot and ball compartments point to this adidas Tiro 21 backpack\'s soccer roots. Stabilizing compression straps and moisture-absorbing AEROREADY combines to keep you comfortable when you\'re on the move.This product is made with recycled content as part of our ambition to end plastic waste.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/BackPack%2FTiro_21_AEROREADY_Backpack_Black_GH7261_01_standard-removebg-preview.png?alt=media&token=29f22a3b-b48a-43da-9bcb-8380c28284fc',
+    'Products' : {
+      '0' : {
+        'Price' : '48.00',
+        'Images' : [
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b8acd74f1726414cac06ac8a00fa3053_9366/Tiro_21_AEROREADY_Backpack_Black_GH7261_01_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e1ef768ffc504810ad87ac8a00fa5acb_9366/Tiro_21_AEROREADY_Backpack_Black_GH7261_02_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1b57c963ccfd49b69266ac8a00fa60f7_9366/Tiro_21_AEROREADY_Backpack_Black_GH7261_04_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/8d9f9c0359f74a3aa3fcac8a00fa67d9_9366/Tiro_21_AEROREADY_Backpack_Black_GH7261_05_hover_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/702b6a545ff14555a045ac8a00fa6eb1_9366/Tiro_21_AEROREADY_Backpack_Black_GH7261_41_detail.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e07b3bc1fae2425e912eac8a00fa77dd_9366/Tiro_21_AEROREADY_Backpack_Black_GH7261_42_detail.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bf33de4c36bf4ca5aee4ac8a00fa7fed_9366/Tiro_21_AEROREADY_Backpack_Black_GH7261_43_detail.jpg',
+          ],
+      },
+    },
+  },
+  //ADIDAS ADVENTURE BACKPACK SMALL
+  {
+    'Title' : 'ADIDAS ADVENTURE',
+    'Ratings' : 5.0,
+    'BackgroundColor' : Colors.black.withOpacity(0.5),
+    'Colors' : [
+      Colors.black,
+    ],
+    'Description':
+    'Inspired by the training pitch, engineered for real life. The inclusion of boot and ball compartments point to this adidas Tiro 21 backpack\'s soccer roots. Stabilizing compression straps and moisture-absorbing AEROREADY combines to keep you comfortable when you\'re on the move.This product is made with recycled content as part of our ambition to end plastic waste.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/BackPack%2Fadidas_Adventure_Backpack_Small_Black_HE9714_01_standard-removebg-preview.png?alt=media&token=a8b98e49-52f8-4f95-8cb5-d3803c155c6f',
+    'Products' : {
+      '0' : {
+        'Price' : '32.00',
+        'Images' : [
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/21659b80e5ff4d2ab09fadd2013f2aa7_9366/adidas_Adventure_Backpack_Small_Black_HE9714_01_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c44bd277e634421b8fefadd2013f428c_9366/adidas_Adventure_Backpack_Small_Black_HE9714_02_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/69ee422f388d4e9ca52dadd2013f5e99_9366/adidas_Adventure_Backpack_Small_Black_HE9714_04_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2f8ebca4f00047a5b09cadd2013f78bd_9366/adidas_Adventure_Backpack_Small_Black_HE9714_05_hover_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/28e2b8e8b5de454fbccaadd2013f9ea3_9366/adidas_Adventure_Backpack_Small_Black_HE9714_41_detail.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/426c6455489f43458616add2013fc252_9366/adidas_Adventure_Backpack_Small_Black_HE9714_42_detail.jpg',
+          ],
+      },
+    },
+  },
+  //ADIDAS ADVENTURE WEEKENDER BAG
+  {
+    'Title' : 'ADIDAS ADVENTURE WEEKENDER',
+    'Ratings' : 5.0,
+    'BackgroundColor' : Color(0XFFCABC9D).withOpacity(0.5),
+    'Colors' : [
+      Color(0XFFCABC9D),
+    ],
+    'Description':
+    'Weekend and adventure are in the name of this adidas bag. But if the adventure lasts longer, who are we to judge? Stay out and travel as long as you want because you\'ve got plenty of room to carry your stuff. Buckle up for exploration without bulking up, thanks to those handy straps on front. Rugged ripstop will remind you of parachutes and tents.Made in part with recycled content generated from production waste, e.g. cutting scraps, and post-consumer household waste to avoid the larger environmental impact of producing virgin content.',
+    'ThumbnailURL':
+    'https://firebasestorage.googleapis.com/v0/b/e-commerce-52dcd.appspot.com/o/BackPack%2Fadidas_Adventure_Weekender_Bag_Beige_HD9662_01_standard-removebg-preview.png?alt=media&token=ae517819-743c-422a-aea9-ea50a8bee687',
+    'Products' : {
+      '0' : {
+        'Price' : '140.00',
+        'Images' : [
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/35f69f504d8245d296ffadd601526dfb_9366/adidas_Adventure_Weekender_Bag_Beige_HD9662_01_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e81406bc7a134d22a17aadd60152895c_9366/adidas_Adventure_Weekender_Bag_Beige_HD9662_02_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/44756973c6454b0592e0adda009e0298_9366/adidas_Adventure_Weekender_Bag_Beige_HD9662_04_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/579bf3721b7e45bea359add8002886a4_9366/adidas_Adventure_Weekender_Bag_Beige_HD9662_05_hover_standard.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/494701b60f4449a289eaadd60152c03e_9366/adidas_Adventure_Weekender_Bag_Beige_HD9662_41_detail.jpg',
+          'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/9cd30454f4bc4bcdab49add60152dd58_9366/adidas_Adventure_Weekender_Bag_Beige_HD9662_42_detail.jpg',
+          ],
+      },
+    },
+  },
+];
