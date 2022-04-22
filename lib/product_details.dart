@@ -2266,7 +2266,7 @@ List<Map<String, dynamic>> watches = [
     'Unit' : 'MM',
     'BackgroundColor' : Colors.grey,
     'Colors' : [
-      [Color(0XFFEAEBEA), Color(0XFFEBCEA6)],
+      [const Color(0XFFEAEBEA), const Color(0XFFEBCEA6)],
     ],
     'Description':
     'Our Gen 6 Bradshaw smartwatch is the perfect combination of brains and beauty. Crafted from two-tone stainless steel, this state-of-the-art timepiece is equipped with a host of wellness features including a heart-rate monitor, an SPO2 sensor to track your breathing and sleep readings to improve your snooze. Capable of charging two times faster than other leading smartwatch styles, this device will support you every step of the way.',
@@ -2291,9 +2291,9 @@ List<Map<String, dynamic>> watches = [
     'Title' : 'Gen 6 Bradshaw Pavé',
     'Ratings' : 5.0,
     'Unit' : 'MM',
-    'BackgroundColor' : Color(0XFFE0C498).withOpacity(0.5),
+    'BackgroundColor' : const Color(0XFFE0C498).withOpacity(0.5),
     'Colors' : [
-      Color(0XFFE0C498),
+      const Color(0XFFE0C498),
     ],
     'Description':
     'Our Gen 6 Bradshaw smartwatch is the perfect combination of brains and beauty. Crafted from two-tone stainless steel, this state-of-the-art timepiece is equipped with a host of wellness features including a heart-rate monitor, an SPO2 sensor to track your breathing and sleep readings to improve your snooze. Capable of charging two times faster than other leading smartwatch styles, this device will support you every step of the way.',
@@ -2318,9 +2318,9 @@ List<Map<String, dynamic>> watches = [
     'Title' : 'Gen 5E MKGO',
     'Ratings' : 5.0,
     'Unit' : 'MM',
-    'BackgroundColor' : Color(0XFFC5C4C4).withOpacity(0.5),
+    'BackgroundColor' : const Color(0XFFC5C4C4).withOpacity(0.5),
     'Colors' : [
-      Color(0XFFC5C4C4),
+      const Color(0XFFC5C4C4),
     ],
     'Description':
     'Sport-luxe style: featuring a logo-embossed strap, our Michael Kors Access Gen 5E MKGO 2 smartwatch will effortlessly complement your on-the-go, active lifestyle. Designed from lightweight rose gold-tone aluminum and powered by Wear OS by Google™, this pavé-accented timepiece is equipped with estimated heart-rate tracking, payment methods, a built-in speaker for Bluetooth-enabled calling and more to keep you connected to your daily goals. The multiple display faces can be changed for the ultimate in customization.',
@@ -2343,9 +2343,9 @@ List<Map<String, dynamic>> watches = [
     'Title' : 'Gen 5E Darci',
     'Ratings' : 3.3,
     'Unit' : 'MM',
-    'BackgroundColor' : Color(0XFFE1BAA6).withOpacity(0.5),
+    'BackgroundColor' : const Color(0XFFE1BAA6).withOpacity(0.5),
     'Colors' : [
-      Color(0XFFE1BAA6),
+      const Color(0XFFE1BAA6),
     ],
     'Description':
     'A little glam, a little next-generation technology—our pavé-accented Gen 5E Darci smartwatch delivers refined style for everyday wear. Crafted from rose gold-tone stainless steel and powered by Wear OS by Google™, this timepiece features a built-in speaker for Bluetooth-enabled calling, estimated heart-rate tracking, payment methods and more to support your daily wellness needs.',
@@ -2372,9 +2372,9 @@ List<Map<String, dynamic>> watches = [
     'Title' : 'Gen 6 Bradshaw Rose Gold',
     'Ratings' : 2.7,
     'Unit' : 'MM',
-    'BackgroundColor' : Color(0XFFE4BDA3).withOpacity(0.5),
+    'BackgroundColor' : const Color(0XFFE4BDA3).withOpacity(0.5),
     'Colors' : [
-      Color(0XFFE4BDA3),
+      const Color(0XFFE4BDA3),
     ],
     'Description':
     'Our Gen 6 Bradshaw smartwatch is the perfect combination of brains and beauty. Crafted from rose-gold tone stainless steel, this state-of-the-art timepiece is equipped with a host of wellness features including a heart-rate monitor, an SPO2 sensor to track your breathing and sleep readings to improve your snooze. Capable of charging two times faster than other leading smartwatch styles, this device will support you every step of the way.',
@@ -2400,9 +2400,9 @@ List<Map<String, dynamic>> watches = [
     'Title' : 'Gen 6 Bradshaw Pavé Rose',
     'Ratings' : 5.0,
     'Unit' : 'MM',
-    'BackgroundColor' : Color(0XFFE6BEA3).withOpacity(0.5),
+    'BackgroundColor' : const Color(0XFFE6BEA3).withOpacity(0.5),
     'Colors' : [
-      Color(0XFFE6BEA3),
+      const Color(0XFFE6BEA3),
     ],
     'Description':
     'Our Gen 6 Bradshaw smartwatch is the perfect combination of brains and beauty. Crafted from rose-gold tone stainless steel, this state-of-the-art timepiece is equipped with a host of wellness features including a heart-rate monitor, an SPO2 sensor to track your breathing and sleep readings to improve your snooze. Capable of charging two times faster than other leading smartwatch styles, this device will support you every step of the way.',
@@ -2427,9 +2427,9 @@ List<Map<String, dynamic>> watches = [
     'Title' : 'Gen 5E Darci Pavé Gold',
     'Ratings' : 4.2,
     'Unit' : 'MM',
-    'BackgroundColor' : Color(0XFFDDC69A).withOpacity(0.5),
+    'BackgroundColor' : const Color(0XFFDDC69A).withOpacity(0.5),
     'Colors' : [
-      Color(0XFFDDC69A),
+      const Color(0XFFDDC69A),
     ],
     'Description':
     'A little glam, a little next-generation technology—our pavé-accented Gen 5E Darci smartwatch delivers refined style for everyday wear. Crafted from gold-tone stainless steel and powered by Wear OS by Google™, this timepiece features a built-in speaker for Bluetooth-enabled calling, estimated heart-rate tracking, payment methods and more to support your daily wellness needs.',
@@ -2456,9 +2456,9 @@ List<Map<String, dynamic>> watches = [
     'Title' : 'Gen 5E Darci Pavé Two',
     'Ratings' : 4.2,
     'Unit' : 'MM',
-    'BackgroundColor' : Color(0XFFC1C0C0).withOpacity(0.5),
+    'BackgroundColor' : const Color(0XFFC1C0C0).withOpacity(0.5),
     'Colors' : [
-      [Color(0XFFC1C0C0), Color(0XFFDCBAA7)],
+      [const Color(0XFFC1C0C0), const Color(0XFFDCBAA7)],
     ],
     'Description':
     'A little glam, a little next-generation technology—our pavé-accented Gen 5E Darci smartwatch delivers refined style for everyday wear. Crafted from gold-tone stainless steel and powered by Wear OS by Google™, this timepiece features a built-in speaker for Bluetooth-enabled calling, estimated heart-rate tracking, payment methods and more to support your daily wellness needs.',
@@ -2513,9 +2513,9 @@ List<Map<String, dynamic>> watches = [
     'Title' : 'Access Gen 6E MKGO',
     'Ratings' : 4.1,
     'Unit' : 'MM',
-    'BackgroundColor' : Color(0XFFC69D9A).withOpacity(0.5),
+    'BackgroundColor' : const Color(0XFFC69D9A).withOpacity(0.5),
     'Colors' : [
-      Color(0XFFC69D9A),
+      const Color(0XFFC69D9A),
     ],
     'Description':
     'Sport-luxe style: featuring a logo-embossed strap, our Michael Kors Access Gen 5E MKGO 2 smartwatch will effortlessly complement your on-the-go, active lifestyle. Designed from lightweight two-tone aluminum and powered by Wear OS by Google™, this pave-accented timepiece is equipped with estimated heart-rate tracking, payment methods, a built-in speaker for Bluetooth-enabled calling and more to keep you connected to your daily goals. The multiple display faces can be changed for the ultimate in customization.',
@@ -2582,10 +2582,10 @@ List<Map<String, dynamic>> backpack = [
   {
     'Title' : 'RIDEVENTURE BACKPACK',
     'Ratings' : 4.1,
-    'BackgroundColor' : Color(0XFF151A7B).withOpacity(0.5),
+    'BackgroundColor' : const Color(0XFF151A7B).withOpacity(0.5),
     'Colors' : [
-      [Color(0XFF272835), Color(0XFF783235)],
-      Color(0XFF333126),
+      [const Color(0XFF272835), const Color(0XFF783235)],
+      const Color(0XFF333126),
       Colors.black,
     ],
     'Description':
@@ -2719,9 +2719,9 @@ List<Map<String, dynamic>> backpack = [
   {
     'Title' : 'ADIDAS ADVENTURE WEEKENDER',
     'Ratings' : 5.0,
-    'BackgroundColor' : Color(0XFFCABC9D).withOpacity(0.5),
+    'BackgroundColor' : const Color(0XFFCABC9D).withOpacity(0.5),
     'Colors' : [
-      Color(0XFFCABC9D),
+      const Color(0XFFCABC9D),
     ],
     'Description':
     'Weekend and adventure are in the name of this adidas bag. But if the adventure lasts longer, who are we to judge? Stay out and travel as long as you want because you\'ve got plenty of room to carry your stuff. Buckle up for exploration without bulking up, thanks to those handy straps on front. Rugged ripstop will remind you of parachutes and tents.Made in part with recycled content generated from production waste, e.g. cutting scraps, and post-consumer household waste to avoid the larger environmental impact of producing virgin content.',
