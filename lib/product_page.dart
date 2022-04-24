@@ -1,4 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project/Internet_Connection/connectivity_provider.dart';
@@ -6,13 +8,9 @@ import 'package:project/Internet_Connection/no_internet.dart';
 import 'package:provider/provider.dart';
 
 class ProductPage extends StatefulWidget {
-  late bool isFavourite;
-  final Map<String, dynamic> items;
-  final String title;
-  final String? unit;
-  final List colors;
+  final Map<String, dynamic> product;
 
-  ProductPage({Key? key,required this.unit, required this.isFavourite, required this.items, required this.title, required this.colors}) : super(key: key);
+  const ProductPage({Key? key, required this.product}) : super(key: key);
 
   @override
   State<ProductPage> createState() => _ProductPageState();
@@ -21,12 +19,15 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   PageController controller = PageController();
   int isSelected = 0;
-  Map<String, dynamic> product = {};
+  Map<String, dynamic> item = {};
+  Map<String, dynamic> variety = {};
+  DocumentReference documentreference = FirebaseFirestore.instance.collection('Users').doc(FirebaseAuth.instance.currentUser!.email);
 
   @override
   void initState() {
-    product = widget.items['0'];
-    print(product);
+    item = widget.product;
+    variety = widget.product['Products']['0'];
+    print(item);
     Provider.of<ConnectivityProvider>(context, listen: false).startMonitoring();
     super.initState();
   }
@@ -62,23 +63,43 @@ class _ProductPageState extends State<ProductPage> {
                           ),
                           Padding(
                             padding: EdgeInsets.fromLTRB(0, size.width * 0.05, size.width * 0.05, 0),
-                            child: GestureDetector(
-                              onTap: () {
-                                setState(
-                                      () {
-                                    widget.isFavourite = !widget.isFavourite;
-                                  },
-                                );
+                            child: StreamBuilder(
+                              stream: documentreference.collection('Favourite').where('Title',isEqualTo: item['Title']).snapshots(),
+                              builder: (context,AsyncSnapshot snapshot) {
+                                if(snapshot.hasData) {
+                                  return GestureDetector(
+                                    onTap: () async {
+                                      if(snapshot.data.docs.length == 0) {
+                                        Map<String, dynamic> productData = {
+                                          'Title' : item['Title'],
+                                          'Rating' : item['Ratings'],
+                                          'BackgroundColor' : item['BackgroundColor'].toString(),
+                                          'Unit' : item['Unit'],
+                                          'Colors' : item['Colors'].toString(),
+                                          'Description' : item['Description'],
+                                          'Image' : item['ThumbnailURL'],
+                                          'Products' : item['Products'],
+                                          'Price' : item['Products']['0']['Price'],
+                                        };
+                                        await documentreference.collection('Favourite').doc(item['Title']).set(productData);
+                                      }
+                                      if(snapshot.data.docs.length != 0) {
+                                        documentreference.collection('Favourite').doc(item['Title']).delete();
+                                      }
+                                    },
+                                    child: CircleAvatar(
+                                      radius: 15,
+                                      backgroundColor: snapshot.data.docs.length != 0 ? Colors.red : Colors.transparent,
+                                      child: Icon(
+                                        Icons.favorite,
+                                        color: snapshot.data.docs.length != 0 ? Colors.white : Colors.grey,
+                                        size: size.width * 0.05,
+                                      ),
+                                    ),
+                                  );
+                                }
+                                return const SizedBox();
                               },
-                              child: CircleAvatar(
-                                radius: size.width * 0.04,
-                                backgroundColor: widget.isFavourite == true ? Colors.red : Colors.transparent,
-                                child: Icon(
-                                  Icons.favorite,
-                                  color: widget.isFavourite == true ? Colors.white : Colors.grey,
-                                  size: size.width * 0.05,
-                                ),
-                              ),
                             ),
                           )
                         ],
@@ -89,9 +110,9 @@ class _ProductPageState extends State<ProductPage> {
                         child: PageView(
                           controller: controller,
                                 children: List.generate(
-                                  product['Images'].length,
+                                  variety['Images'].length,
                                   (index) => CachedNetworkImage(
-                                    imageUrl: product['Images'][index],
+                                    imageUrl: variety['Images'][index],
                                       placeholder: (context, url) => Lottie.asset('assets/94423-jelly-loading.json'),
                                   ),
                                 ),
@@ -104,10 +125,10 @@ class _ProductPageState extends State<ProductPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              widget.title,
+                              item['Title'],
                               style: TextStyle(fontSize: size.width * 0.05, fontWeight: FontWeight.bold),
                             ),
-                            product['Size'] != null && widget.unit != null ? Row(
+                            variety['Size'] != null && item['Unit'] != null ? Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 const Text('Size : '),
@@ -118,7 +139,7 @@ class _ProductPageState extends State<ProductPage> {
                                       shrinkWrap: true,
                                       scrollDirection: Axis.horizontal,
                                       children: List.generate(
-                                        product['Size'].length,
+                                        variety['Size'].length,
                                             (index) => InkWell(
                                           onTap: () {
                                             setState(
@@ -137,7 +158,7 @@ class _ProductPageState extends State<ProductPage> {
                                               alignment: Alignment.center,
                                               padding: EdgeInsets.symmetric(vertical: size.width * 0.012, horizontal: size.width * 0.019),
                                               child: Text(
-                                                ' ${widget.unit} ${product['Size'][index]}',
+                                                ' ${item['Unit']} ${variety['Size'][index]}',
                                                 style: const TextStyle(fontWeight: FontWeight.w600),
                                               ),
                                               constraints: BoxConstraints(
@@ -163,14 +184,14 @@ class _ProductPageState extends State<ProductPage> {
                                       shrinkWrap: true,
                                       scrollDirection: Axis.horizontal,
                                       children: List.generate(
-                                        widget.colors.length,
+                                        item['Colors'].length,
                                             (index) {
-                                          print(widget.colors[index].runtimeType);
+                                          print(item['Colors'][index].runtimeType);
                                           return GestureDetector(
                                             onTap: () {
                                               setState(
                                                     () {
-                                                  product = widget.items['${index}'];
+                                                  variety = item['Products']['${index}'];
                                                 },
                                               );
                                             },
@@ -180,14 +201,14 @@ class _ProductPageState extends State<ProductPage> {
                                               margin: EdgeInsets.symmetric(horizontal: size.width * 0.019),
                                               decoration: BoxDecoration(
                                                 shape: BoxShape.circle,
-                                                color: widget.colors[index] is! List<Color> ? widget.colors[index] : null,
+                                                color: item['Colors'][index] is! List<Color> ? item['Colors'][index] : null,
                                                 border: Border.all(color: Colors.white),
-                                                gradient: widget.colors[index] is List<Color>
+                                                gradient: item['Colors'][index] is List<Color>
                                                     ? LinearGradient(
                                                   begin: Alignment.topLeft,
                                                   end: Alignment.bottomRight,
                                                   stops: [0.5, 0.5],
-                                                  colors: widget.colors[index],
+                                                  colors: item['Colors'][index],
                                                 )
                                                     : null,
                                               ),
@@ -225,7 +246,7 @@ class _ProductPageState extends State<ProductPage> {
                             children: [
                               Text('\$ '),
                               Text(
-                                product['Price'],
+                                variety['Price'],
                                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: size.width * 0.06),
                               ),
                             ],

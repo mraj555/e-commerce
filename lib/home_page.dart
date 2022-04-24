@@ -21,10 +21,9 @@ class _HomeState extends State<Home> {
   List<String> items = ['Shoes', 'Watch', 'Backpack'];
   List products = [data.shoes, data.watches, data.backpack];
   List<String> images = ['sneakers.png', 'watch.png', 'backpack.png'];
-  var isFavourite = List.generate(data.shoes.length, (index) => false);
   var currentIndex = 0;
   var currentProduct = data.shoes;
-
+  DocumentReference documentreference = FirebaseFirestore.instance.collection('Users').doc(FirebaseAuth.instance.currentUser!.email);
 
   @override
   Widget build(BuildContext context) {
@@ -122,11 +121,7 @@ class _HomeState extends State<Home> {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) => ProductPage(
-                            unit: currentProduct[index]['Unit'],
-                            colors: currentProduct[index]['Colors'],
-                            isFavourite: isFavourite[index],
-                            items: currentProduct[index]['Products'],
-                            title: currentProduct[index]['Title'],
+                            product: currentProduct[index],
                           ),
                         ),
                       );
@@ -139,35 +134,43 @@ class _HomeState extends State<Home> {
                             alignment: Alignment.topRight,
                             child: Padding(
                               padding: EdgeInsets.fromLTRB(0, size.width * 0.05, size.width * 0.05, 0),
-                              child: GestureDetector(
-                                onTap: () async {
-                                  setState(
-                                        () {
-                                      isFavourite[index] = !isFavourite[index];
-                                    },
-                                  );
-                                  DocumentReference documentreference = FirebaseFirestore.instance.collection('Users').doc(FirebaseAuth.instance.currentUser!.email).collection('Favourite').doc(currentProduct[index]['Title']);
-                                  if(isFavourite[index] == true) {
-                                    Map<String, dynamic> productData = {
-                                      'Title' : currentProduct[index]['Title'],
-                                      'Price' : currentProduct[index]['Products']['0']['Price'],
-                                      'Image' : currentProduct[index]['ThumbnailURL'],
-                                    };
-                                    await documentreference.set(productData);
-                                  }
-                                  if(isFavourite[index] == false) {
-                                    documentreference.delete();
-                                  }
+                              child: StreamBuilder(
+                                stream: documentreference.collection('Favourite').where('Title',isEqualTo: currentProduct[index]['Title']).snapshots(),
+                                builder: (context,AsyncSnapshot snapshot) {
+                                    if(snapshot.hasData) {
+                                      return GestureDetector(
+                                        onTap: () async {
+                                          if(snapshot.data.docs.length == 0) {
+                                            Map<String, dynamic> productData = {
+                                              'Title' : currentProduct[index]['Title'],
+                                              'Rating' : currentProduct[index]['Ratings'],
+                                              'BackgroundColor' : currentProduct[index]['BackgroundColor'].toString(),
+                                              'Unit' : currentProduct[index]['Unit'],
+                                              'Colors' : currentProduct[index]['Colors'].toString(),
+                                              'Description' : currentProduct[index]['Description'],
+                                              'Image' : currentProduct[index]['ThumbnailURL'],
+                                              'Products' : currentProduct[index]['Products'],
+                                              'Price' : currentProduct[index]['Products']['0']['Price'],
+                                            };
+                                            await documentreference.collection('Favourite').doc(currentProduct[index]['Title']).set(productData);
+                                          }
+                                          if(snapshot.data.docs.length != 0) {
+                                            documentreference.collection('Favourite').doc(currentProduct[index]['Title']).delete();
+                                          }
+                                        },
+                                        child: CircleAvatar(
+                                          radius: 15,
+                                          backgroundColor: snapshot.data.docs.length != 0 ? Colors.red : Colors.transparent,
+                                          child: Icon(
+                                            Icons.favorite,
+                                            color: snapshot.data.docs.length != 0 ? Colors.white : Colors.grey,
+                                            size: size.width * 0.05,
+                                          ),
+                                        ),
+                                      );
+                                    }
+                                    return const SizedBox();
                                 },
-                                child: CircleAvatar(
-                                  radius: 15,
-                                  backgroundColor: isFavourite[index] == true ? Colors.red : Colors.transparent,
-                                  child: Icon(
-                                    Icons.favorite,
-                                    color: isFavourite[index] == true ? Colors.white : Colors.grey,
-                                    size: size.width * 0.05,
-                                  ),
-                                ),
                               ),
                             ),
                           ),
