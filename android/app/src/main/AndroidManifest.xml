@@ -8,7 +8,7 @@
     <application
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:label="project">
+        android:label="RetailCity">
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"

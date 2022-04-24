@@ -1,6 +1,9 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:project/product_page.dart';
 
 import 'product_details.dart' as data;
@@ -26,6 +29,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    print(size.width);
     return Scaffold(
       backgroundColor: const Color(0xfff7f6f6),
       appBar: AppBar(
@@ -70,7 +74,7 @@ class _HomeState extends State<Home> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: List.generate(
                 items.length,
-                (index) => InkWell(
+                    (index) => InkWell(
                   onTap: () {
                     setState(
                       () {
@@ -82,29 +86,29 @@ class _HomeState extends State<Home> {
                   child: Card(
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                     elevation: currentIndex == index ? 15 : 0.0,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ConstrainedBox(
-                        constraints: BoxConstraints(minWidth: size.width * 0.25),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.asset(
-                              'assets/Items/' + images[index],
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints(minWidth: size.width * 0.25),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Image.asset(
+                                  'assets/Items/' + images[index],
+                                ),
+                                Text(
+                                  items[index],
+                                  style: GoogleFonts.notoSerif(
+                                    color: currentIndex == index ? Colors.deepPurple : Colors.black,
+                                    fontWeight: currentIndex == index ? FontWeight.bold : FontWeight.normal,
+                                  ),
+                                ),
+                              ],
                             ),
-                            Text(
-                              items[index],
-                              style: GoogleFonts.notoSerif(
-                                color: currentIndex == index ? Colors.deepPurple : Colors.black,
-                                fontWeight: currentIndex == index ? FontWeight.bold : FontWeight.normal,
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ),
               ),
             ),
             SizedBox(height: size.width * 0.03),
@@ -134,14 +138,26 @@ class _HomeState extends State<Home> {
                           Align(
                             alignment: Alignment.topRight,
                             child: Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 20, 20, 0),
+                              padding: EdgeInsets.fromLTRB(0, size.width * 0.05, size.width * 0.05, 0),
                               child: GestureDetector(
-                                onTap: () {
+                                onTap: () async {
                                   setState(
-                                    () {
+                                        () {
                                       isFavourite[index] = !isFavourite[index];
                                     },
                                   );
+                                  DocumentReference documentreference = FirebaseFirestore.instance.collection('Users').doc(FirebaseAuth.instance.currentUser!.email).collection('Favourite').doc(currentProduct[index]['Title']);
+                                  if(isFavourite[index] == true) {
+                                    Map<String, dynamic> productData = {
+                                      'Title' : currentProduct[index]['Title'],
+                                      'Price' : currentProduct[index]['Products']['0']['Price'],
+                                      'Image' : currentProduct[index]['ThumbnailURL'],
+                                    };
+                                    await documentreference.set(productData);
+                                  }
+                                  if(isFavourite[index] == false) {
+                                    documentreference.delete();
+                                  }
                                 },
                                 child: CircleAvatar(
                                   radius: 15,
@@ -149,7 +165,7 @@ class _HomeState extends State<Home> {
                                   child: Icon(
                                     Icons.favorite,
                                     color: isFavourite[index] == true ? Colors.white : Colors.grey,
-                                    size: 20,
+                                    size: size.width * 0.05,
                                   ),
                                 ),
                               ),
@@ -164,30 +180,34 @@ class _HomeState extends State<Home> {
                                   alignment: Alignment.center,
                                   children: [
                                     CircleAvatar(
-                                      radius: 70,
+                                      radius: size.width * 0.17,
                                       backgroundColor: currentProduct[index]['BackgroundColor'].withOpacity(0.5),
                                       child: CircleAvatar(
-                                        radius: 60,
+                                        radius: size.width * 0.145,
                                         child: Container(
                                           decoration: BoxDecoration(color: Colors.transparent, shape: BoxShape.circle, border: Border.all(color: Colors.white)),
                                         ),
                                         backgroundColor: currentProduct[index]['BackgroundColor'].withOpacity(0.01),
                                       ),
                                     ),
-                                    Image.network(currentProduct[index]['ThumbnailURL'], width: size.width * 0.4), /* 0.4 - Shoes , 0.25 - Watches */
+                                    CachedNetworkImage(
+                                      imageUrl: currentProduct[index]['ThumbnailURL'],
+                                      width: size.width * 0.4,
+                                      placeholder: (context, url) => Lottie.asset('assets/97952-loading-animation-blue.json', width: size.width * 0.4),
+                                    ), /* 0.4 - Shoes , 0.25 - Watches */
                                   ],
                                 ),
-                                const SizedBox(height: 20),
+                                SizedBox(height: size.width * 0.05),
                                 Text(
                                   currentProduct[index]['Title'],
                                   textAlign: TextAlign.center,
                                   style: GoogleFonts.notoSerif(color: Colors.deepPurple),
                                 ),
-                                const SizedBox(height: 10),
+                                SizedBox(height: size.width * 0.02),
                                 RichText(
                                   textAlign: TextAlign.center,
                                   text: TextSpan(text: '\$', style: GoogleFonts.notoSerif(color: Colors.deepPurple), children: [
-                                    TextSpan(text: '${currentProduct[index]['Products']['0']['Price']}', style: GoogleFonts.notoSerif(color: Colors.deepPurple, fontWeight: FontWeight.bold, fontSize: 20)),
+                                    TextSpan(text: '${currentProduct[index]['Products']['0']['Price']}', style: GoogleFonts.notoSerif(color: Colors.deepPurple, fontWeight: FontWeight.bold, fontSize: size.width * 0.05)),
                                   ]),
                                 ),
                               ],

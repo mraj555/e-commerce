@@ -18,18 +18,19 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: pages[_currentIndex],
       bottomNavigationBar: BottomAppBar(
         color: Colors.white,
         child: Container(
-          height: 60,
+          height: size.width * 0.15,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                width: 180,
+                width: size.width * 0.4375,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -42,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                         );
                       },
                       child: Icon(Icons.home, size: 30, color: _currentIndex == 0 ? Colors.deepPurple : Colors.grey),
-                      minWidth: 40,
+                      minWidth: size.width * 0.09,
                     ),
                     MaterialButton(
                       onPressed: () {
@@ -52,14 +53,14 @@ class _HomePageState extends State<HomePage> {
                           },
                         );
                       },
-                      child: Icon(Icons.favorite, size: 30, color: _currentIndex == 1 ? Colors.deepPurple : Colors.grey),
+                      child: Icon(Icons.favorite, size: size.width * 0.07, color: _currentIndex == 1 ? Colors.deepPurple : Colors.grey),
                       minWidth: 40,
                     ),
                   ],
                 ),
               ),
               Container(
-                width: 180,
+                width: size.width * 0.4375,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -71,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                           },
                         );
                       },
-                      child: Icon(Icons.reorder,size: 30, color: _currentIndex == 2 ? Colors.deepPurple : Colors.grey),
+                      child: Icon(Icons.reorder,size: size.width * 0.07, color: _currentIndex == 2 ? Colors.deepPurple : Colors.grey),
                       minWidth: 40,
                     ),
                     MaterialButton(
@@ -82,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                           },
                         );
                       },
-                      child: Icon(Icons.settings,size: 30, color: _currentIndex == 3 ? Colors.deepPurple : Colors.grey),
+                      child: Icon(Icons.settings,size: size.width * 0.07, color: _currentIndex == 3 ? Colors.deepPurple : Colors.grey),
                       minWidth: 40,
                     ),
                   ],
