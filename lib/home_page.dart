@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:project/Custom_Widget/custom_page_route.dart';
 import 'package:project/product_page.dart';
 
 import 'product_details.dart' as data;
@@ -83,18 +84,18 @@ class _HomeState extends State<Home> {
                     );
                   },
                   child: Card(
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10), side: currentIndex == index ? const BorderSide(color: Colors.blue) : BorderSide.none),
                     elevation: currentIndex == index ? 15 : 0.0,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: ConstrainedBox(
-                            constraints: BoxConstraints(minWidth: size.width * 0.25),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Image.asset(
-                                  'assets/Items/' + images[index],
-                                ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(minWidth: size.width * 0.25),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.asset(
+                              'assets/Items/' + images[index],
+                            ),
                                 Text(
                                   items[index],
                                   style: GoogleFonts.notoSerif(
@@ -119,8 +120,8 @@ class _HomeState extends State<Home> {
                   return InkWell(
                     onTap: () {
                       Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => ProductPage(
+                        CustomPageRoute(
+                          child: ProductPage(
                             product: currentProduct[index],
                           ),
                         ),
@@ -134,17 +135,17 @@ class _HomeState extends State<Home> {
                             alignment: Alignment.topRight,
                             child: Padding(
                               padding: EdgeInsets.fromLTRB(0, size.width * 0.05, size.width * 0.05, 0),
-                              child: StreamBuilder(
+                              child: StreamBuilder<QuerySnapshot>(
                                 stream: documentreference.collection('Favourite').where('Title',isEqualTo: currentProduct[index]['Title']).snapshots(),
-                                builder: (context,AsyncSnapshot snapshot) {
+                                builder: (context, snapshot) {
                                     if(snapshot.hasData) {
                                       return GestureDetector(
                                         onTap: () async {
-                                          if(snapshot.data.docs.length == 0) {
+                                          if(snapshot.data!.docs.length == 0) {
                                             Map<String, dynamic> productData = {
                                               'Title' : currentProduct[index]['Title'],
                                               'Rating' : currentProduct[index]['Ratings'],
-                                              'BackgroundColor' : currentProduct[index]['BackgroundColor'].toString(),
+                                              'BackgroundColor' : currentProduct[index]['BackgroundColor'].value.toString(),
                                               'Unit' : currentProduct[index]['Unit'],
                                               'Colors' : currentProduct[index]['Colors'].toString(),
                                               'Description' : currentProduct[index]['Description'],
@@ -154,16 +155,16 @@ class _HomeState extends State<Home> {
                                             };
                                             await documentreference.collection('Favourite').doc(currentProduct[index]['Title']).set(productData);
                                           }
-                                          if(snapshot.data.docs.length != 0) {
+                                          if(snapshot.data!.docs.length != 0) {
                                             documentreference.collection('Favourite').doc(currentProduct[index]['Title']).delete();
                                           }
                                         },
                                         child: CircleAvatar(
                                           radius: 15,
-                                          backgroundColor: snapshot.data.docs.length != 0 ? Colors.red : Colors.transparent,
+                                          backgroundColor: snapshot.data!.docs.isNotEmpty ? Colors.red : Colors.transparent,
                                           child: Icon(
                                             Icons.favorite,
-                                            color: snapshot.data.docs.length != 0 ? Colors.white : Colors.grey,
+                                            color: snapshot.data!.docs.isNotEmpty ? Colors.white : Colors.grey,
                                             size: size.width * 0.05,
                                           ),
                                         ),
@@ -186,7 +187,7 @@ class _HomeState extends State<Home> {
                                       radius: size.width * 0.17,
                                       backgroundColor: currentProduct[index]['BackgroundColor'].withOpacity(0.5),
                                       child: CircleAvatar(
-                                        radius: size.width * 0.145,
+                                        radius: size.width * 0.14,
                                         child: Container(
                                           decoration: BoxDecoration(color: Colors.transparent, shape: BoxShape.circle, border: Border.all(color: Colors.white)),
                                         ),

@@ -7,8 +7,8 @@ import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:project/Custom_Widget/text_bar.dart';
-import 'package:project/User%20Details/sign_up.dart';
-import 'package:project/User%20Details/verify_email_page.dart';
+import 'package:project/user_details/sign_up.dart';
+import 'package:project/user_details/verify_email_page.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({Key? key}) : super(key: key);
